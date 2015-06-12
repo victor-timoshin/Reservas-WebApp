@@ -1,0 +1,61 @@
+﻿/* ==========================================================
+## FONTS
+============================================================= */
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Regular'), local('ClearSans'), url('/Assets/Fonts/ClearSans/clearsans-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Thin Regular'), local('ClearSans-Thin'), url('/Assets/Fonts/ClearSans/clearsans-thin.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Light Regular'), local('ClearSans-Light'), url('/Assets/Fonts/ClearSans/clearsans-light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Medium Regular'), local('ClearSans-Medium'), url('/Assets/Fonts/ClearSans/clearsans-medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Bold'), local('ClearSans-Bold'), url('/Assets/Fonts/ClearSans/clearsans-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Italic'), local('ClearSans-Italic'), url('/Assets/Fonts/ClearSans/clearsans-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Medium Italic'), local('ClearSans-MediumItalic'), url('/Assets/Fonts/ClearSans/clearsans-mediumitalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	src: local('Clear Sans Bold Italic'), local('ClearSans-BoldItalic'), url('/Assets/Fonts/ClearSans/clearsans-bolditalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+$font-family-default: 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;

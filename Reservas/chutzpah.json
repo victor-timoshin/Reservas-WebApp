@@ -1,0 +1,27 @@
+﻿{
+	"Framework": "jasmine",
+	"TypeScriptModuleKind": "CommonJS",
+	"Compile": {
+		"Mode": "External",
+		"Extensions": [ ".ts" ],
+		"ExtensionsWithNoOutput": [ ".d.ts" ]
+	},
+	"References": [
+		{ "Path": "Assets/Libs/jQuery/jquery-2.0.2.min.js" },
+		{ "Path": "Assets/Libs/AngularJS/angular.js" },
+		{ "Path": "Assets/Libs/AngularJS/angular-resource.js" },
+		{ "Path": "Assets/Libs/AngularJS/angular-route.js" },
+		{ "Path": "Assets/Libs/AngularJS/angular-cookies.js" },
+		{ "Path": "Assets/Libs/AngularJS/angular-translate.js" },
+		{ "Path": "Assets/Libs/AngularJS/angular-mocks.js" }
+	],
+	"Tests": [
+		{
+			"Includes": [
+				"*/*.tests.ts"
+			],
+			"Excludes": [
+			]
+		}
+	]
+}
