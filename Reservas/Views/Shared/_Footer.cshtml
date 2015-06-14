@@ -1,0 +1,31 @@
+﻿@using System.Configuration
+
+<footer class="site-footer" role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+				<div data-ng-controller="RegionSelectorCtrl">
+
+					<!--  UI DropDown directive -->
+					<div data-ui-dropdown class="region-switcher">
+						<a href="" class="dropdown-toggle">
+							<span data-translate="CHANGE_REGION_TITLE"></span>
+							<span class="current">{{currentRegion.name}}</span>
+						</a>
+						<ul class="dropdown-menu">
+							<li data-ng-repeat="region in regions" data-ng-click="setRegion($index)">
+								<a href="" data-code="{{region.code}}">{{region.name}}</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /UI DropDown directive -->
+
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+				<div class="copyright">Copyright &copy; 2015 &laquo;<span class="org">@ConfigurationManager.AppSettings["WEBSITE:NAME"]</span>&raquo;. All rights reserved.</div>
+			</div>
+		</div>
+	</div>
+</footer>

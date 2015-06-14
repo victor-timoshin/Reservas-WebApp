@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CHANGE_REGION_TITLE" xml:space="preserve">
+    <value>Сменить регион</value>
+  </data>
+  <data name="CHOOSE_YOUR_REGION_TITLE" xml:space="preserve">
+    <value>Выбрать регион</value>
+  </data>
   <data name="CURRENCY" xml:space="preserve">
     <value>Валюта</value>
+  </data>
+  <data name="FLIGHTS" xml:space="preserve">
+    <value>Авиабилеты</value>
+  </data>
+  <data name="FLIGHTS_SEARCH" xml:space="preserve">
+    <value>Поиск авиабилетов</value>
+  </data>
+  <data name="HOME_TITLE" xml:space="preserve">
+    <value>Главная страница</value>
+  </data>
+  <data name="HOTELS" xml:space="preserve">
+    <value>Отели</value>
+  </data>
+  <data name="HOTELS_SEARCH" xml:space="preserve">
+    <value>Поиск отелей</value>
+  </data>
+  <data name="REGION_SELECTOR_DESC" xml:space="preserve">
+    <value>Выбор другого региона приведет к изменению языка и/или содержимого страниц веб-сайта.</value>
+  </data>
+  <data name="SPECIAL_OFFERS_TITLE" xml:space="preserve">
+    <value>Специальные предложения от авиакомпаний</value>
   </data>
 </root>

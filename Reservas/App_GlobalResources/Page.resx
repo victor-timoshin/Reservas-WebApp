@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CHANGE_REGION_TITLE" xml:space="preserve">
+    <value>Change region</value>
+  </data>
+  <data name="CHOOSE_YOUR_REGION_TITLE" xml:space="preserve">
+    <value>Choose your region</value>
+  </data>
   <data name="CURRENCY" xml:space="preserve">
     <value>Currency</value>
+  </data>
+  <data name="FLIGHTS" xml:space="preserve">
+    <value>Flights</value>
+  </data>
+  <data name="FLIGHTS_SEARCH" xml:space="preserve">
+    <value>Search flights</value>
+  </data>
+  <data name="HOME_TITLE" xml:space="preserve">
+    <value>Main page</value>
+  </data>
+  <data name="HOTELS" xml:space="preserve">
+    <value>Hotels</value>
+  </data>
+  <data name="HOTELS_SEARCH" xml:space="preserve">
+    <value>Search hotels</value>
+  </data>
+  <data name="REGION_SELECTOR_DESC" xml:space="preserve">
+    <value>Selecting a region changes the language and/or content</value>
+  </data>
+  <data name="SPECIAL_OFFERS_TITLE" xml:space="preserve">
+    <value>Special offers from airlines</value>
   </data>
 </root>

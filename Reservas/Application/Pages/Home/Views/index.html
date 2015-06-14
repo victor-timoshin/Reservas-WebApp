@@ -1,0 +1,28 @@
+﻿<div class="container">
+
+	<div data-ng-controller="SpecialOffersCtrl" class="row">
+		<h1 class="title" data-translate="SPECIAL_OFFERS_TITLE"></h1>
+
+		<div data-ng-repeat="offer in offers" class="col-xs-16 col-sm-8 col-md-8 col-lg-4">
+			<div class="ticket-special-offer">
+				<div class="ticket-special-offer-airline">
+					<h5 class="ticket-special-offer-airline-label">Авиакомпания</h5>
+					<h3 class="ticket-special-offer-airline-name" data-ng-bind="offer.airline"></h3>
+				</div>
+
+				<div style="margin-top: 10px;">
+					<h3 class="from" data-ng-bind="offer.route.from_name"></h3>
+					<h5 class="mid"><span>туда и обратно</span></h5>
+					<h3 class="to" data-ng-bind="offer.route.to_name"></h3>
+				</div>
+
+				<div class="airline-price">
+					<div data-ng-bind="offer.route.onewayPrice"></div>
+					<div data-ng-bind="offer.route.roundtripPrice"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>

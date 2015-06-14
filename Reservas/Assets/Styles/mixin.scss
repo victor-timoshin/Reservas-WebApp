@@ -20,6 +20,21 @@
 }
 
 /* ==========================================================
+## TEXT ELLIP
+============================================================= */
+
+@mixin text-ellip() {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	//-moz-binding: url( 'bindings.xml#ellipsis' );
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	max-width: 100%;
+}
+
+/* ==========================================================
 ## BOX RGBA v1
 ============================================================= */
 
@@ -64,7 +79,6 @@
 
 /* ==========================================================
 ## APPEARANCE
-	С помощью свойства appearance Вы можете превратить тэг HTML документа в указанный элемент пользовательского интерфейса.
 ============================================================= */
 
 @mixin appearance($value) {
@@ -89,7 +103,6 @@
 
 /* ==========================================================
 ## FONT SMOOTHING
-	Определение особенностей отрисовки шрифтов на платформах Linux и Windows
 ============================================================= */
 
 @mixin font-smoothing($value) {
@@ -123,14 +136,6 @@
 
 @mixin transition($params) {
 	@include css3-prefix('transition', $params);
-}
-
-@mixin transition($transition1, $transition2) {
-    -webkit-transition: $transition1, $transition2;
-       -moz-transition: $transition1, $transition2;
-        -ms-transition: $transition1, $transition2;
-         -o-transition: $transition1, $transition2;
-            transition: $transition1, $transition2;
 }
 
 /* ==========================================================
@@ -328,8 +333,6 @@
 
 /* ==========================================================
 ## USER-SELECT-NONE
-	Управляет поведением выделения текста и других элементов на странице.
-	Несмотря на запрет или разрешение, в любом случае можно выделять содержимое текстовых полей формы.
 ============================================================= */
 
 @mixin noselect() {

@@ -1,0 +1,37 @@
+﻿.region-switcher {
+	position: relative;
+	display: inline-block;
+	@include border-radius(2px);
+
+	a.dropdown-toggle {
+		color: #fff;
+		font-size: 14px;
+
+		.current {
+			font-weight: 500;
+		}
+	}
+
+	.dropdown-menu {
+		display: none;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		min-width: 160px;
+		max-width: 480px;
+		z-index: 1000;
+
+		li {
+			a {
+				color: #333;
+				display: block;
+				padding: 5px 15px;
+			}
+		}
+	}
+
+	&.open > .dropdown-menu {
+		display: block;
+	}
+}

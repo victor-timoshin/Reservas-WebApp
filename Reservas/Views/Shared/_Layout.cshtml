@@ -42,28 +42,36 @@
 		<script language="javascript" type="text/javascript" src="~/Assets/Libs/json3.min.js"></script>
 	<![endif]-->
 
+	<script language="javascript" type="text/javascript" src="~/Assets/Libs/Moment/moment-with-locales.js"></script>
+
 	<script language="javascript" type="text/javascript" src="~/Assets/Libs/Underscore/underscore-min.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-route.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-ng-grid.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-resource.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-cookies.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-mocks.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-animate.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-translate.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Assets/Libs/AngularJS/angular-translate-loader-url.min.js"></script>
+
+	@Scripts.Render("~/scripts/angular")
 
 	<script language="javascript" type="text/javascript" src="~/Assets/Libs/Jasmine/jasmine.js"></script>
 
-	<script language="javascript" type="text/javascript" src="~/Application/main.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Application/routes.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/Main.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/Routes.js"></script>
 
-	<script language="javascript" type="text/javascript" src="~/Application/Pages/Layout/layout-ctrl.js"></script>
-	<script language="javascript" type="text/javascript" src="~/Application/Pages/Home/home-ctrl.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/UI/DropDown/DropDownScopeDeclaration.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/UI/DropDown/DropDownDirective.js"></script>
+
+	<script language="javascript" type="text/javascript" src="~/Application/Services/DataService.js"></script>
+
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Layout/controllers/LayoutCtrl.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Layout/controllers/RegionSelectorCtrl.js"></script>
+	
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Home/Controllers/IndexCtrl.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Home/Controllers/SpecialOffersCtrl.js"></script>
+
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Flights/Controllers/IndexCtrl.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Hotels/Controllers/IndexCtrl.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/styles/main")" />
 </head>
 <body data-ng-controller="LayoutCtrl">
+	@Html.Partial("_Header")
 	@RenderBody()
+	@Html.Partial("_Footer")
 </body>
 </html>

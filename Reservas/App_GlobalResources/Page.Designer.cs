@@ -61,11 +61,92 @@ namespace Reservas.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change region.
+        /// </summary>
+        public static string CHANGE_REGION_TITLE {
+            get {
+                return ResourceManager.GetString("CHANGE_REGION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose your region.
+        /// </summary>
+        public static string CHOOSE_YOUR_REGION_TITLE {
+            get {
+                return ResourceManager.GetString("CHOOSE_YOUR_REGION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Currency.
         /// </summary>
         public static string CURRENCY {
             get {
                 return ResourceManager.GetString("CURRENCY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flights.
+        /// </summary>
+        public static string FLIGHTS {
+            get {
+                return ResourceManager.GetString("FLIGHTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search flights.
+        /// </summary>
+        public static string FLIGHTS_SEARCH {
+            get {
+                return ResourceManager.GetString("FLIGHTS_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main page.
+        /// </summary>
+        public static string HOME_TITLE {
+            get {
+                return ResourceManager.GetString("HOME_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotels.
+        /// </summary>
+        public static string HOTELS {
+            get {
+                return ResourceManager.GetString("HOTELS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search hotels.
+        /// </summary>
+        public static string HOTELS_SEARCH {
+            get {
+                return ResourceManager.GetString("HOTELS_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selecting a region changes the language and/or content.
+        /// </summary>
+        public static string REGION_SELECTOR_DESC {
+            get {
+                return ResourceManager.GetString("REGION_SELECTOR_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special offers from airlines.
+        /// </summary>
+        public static string SPECIAL_OFFERS_TITLE {
+            get {
+                return ResourceManager.GetString("SPECIAL_OFFERS_TITLE", resourceCulture);
             }
         }
     }

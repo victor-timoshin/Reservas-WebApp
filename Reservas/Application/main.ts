@@ -1,4 +1,4 @@
-﻿/// <reference path='reference.ts' />
+﻿/// <reference path='Reference.ts' />
 
 'use strict';
 
@@ -36,12 +36,15 @@ module Main {
 		pageTitle: string;
 	}
 
-	App.Module.run(function ($rootScope: IApplicationRootScope, $http: angular.IHttpService, $location: angular.ILocationService, $route: angular.route.IRouteService) {
+	App.Module.run(function ($rootScope: IApplicationRootScope, $http: angular.IHttpService, $location: angular.ILocationService, $route: angular.route.IRouteService, $translate: angular.translate.ITranslateService) {
 		$rootScope.$on('$routeChangeSuccess', function (event: angular.IAngularEvent, currentRoute, previousRoute) {
-			$rootScope.pageTitle = 'Reservas - ' + $route.current['title'];
-		});
-
-		$rootScope.$on('$routeChangeError', function () {
+			if (angular.isDefined($route.current['data'])) {
+				$translate($route.current['data'].title).then(function (translation) {
+					$rootScope.pageTitle = 'Reservas - ' + translation;
+				}, function () {
+					$rootScope.pageTitle = 'Reservas';
+				});
+			}
 		});
 	});
 

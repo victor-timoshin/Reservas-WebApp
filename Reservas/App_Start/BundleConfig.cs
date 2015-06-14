@@ -31,6 +31,18 @@ namespace Reservas
 
 			var styleTransformer = new StyleTransformer(new List<ITranslator> { scssTranslator });
 
+			bundles.Add(new ScriptBundle("~/scripts/angular").Include(
+				"~/Assets/Libs/AngularJS/angular.js",
+				"~/Assets/Libs/AngularJS/angular-route.js",
+				"~/Assets/Libs/AngularJS/angular-ng-grid.js",
+				"~/Assets/Libs/AngularJS/angular-resource.js",
+				"~/Assets/Libs/AngularJS/angular-cookies.js",
+				"~/Assets/Libs/AngularJS/angular-mocks.js",
+				"~/Assets/Libs/AngularJS/angular-animate.js",
+				"~/Assets/Libs/AngularJS/angular-translate.js",
+				"~/Assets/Libs/AngularJS/angular-translate-loader-url.min.js"
+			));
+
 			#region Main
 
 			var mainStyles = new Bundle("~/styles/main");

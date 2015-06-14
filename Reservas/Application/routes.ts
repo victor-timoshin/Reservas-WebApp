@@ -1,10 +1,32 @@
-﻿/// <reference path='reference.ts' />
-/// <reference path='main.ts' />
+﻿/// <reference path='Reference.ts' />
+/// <reference path='Main.ts' />
 
 module Main {
 
 	App.Module.config(['$routeProvider', function ($routeProvider: angular.route.IRouteProvider) {
-		$routeProvider.when('/home', { templateUrl: 'Application/Pages/Home/home-tmpl.html', controller: 'HomeCtrl', title: 'Главная страница' });
+		$routeProvider.when('/home', {
+			templateUrl: 'Application/Pages/Home/Views/index.html',
+			controller: 'Home.IndexCtrl',
+			data: {
+				title: 'HOME_TITLE'
+			}
+		});
+
+		$routeProvider.when('/flights', {
+			templateUrl: 'Application/Pages/Flights/Views/index.html',
+			controller: 'Flights.IndexCtrl',
+			dara: {
+				title: 'FLIGHTS_SEARCH'
+			}
+		});
+
+		$routeProvider.when('/hotels', {
+			templateUrl: 'Application/Pages/Hotels/Views/index.html',
+			controller: 'Hotels.IndexCtrl',
+			data: {
+				title: 'HOTELS_SEARCH'
+			}
+		});
 
 		$routeProvider.otherwise({ redirectTo: '/home' });
 	}]);

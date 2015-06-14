@@ -52,6 +52,10 @@
       <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.64\lib\net40\BundleTransformer.SassAndScss.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="HttpWebRequestHelpers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\HttpWebRequestHelpers-Library\HttpWebRequestHelpers\bin\Debug\HttpWebRequestHelpers.dll</HintPath>
+    </Reference>
     <Reference Include="IronRuby, Version=1.1.4.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>..\packages\BundleTransformer.SassAndScss.1.9.64\lib\net40\IronRuby.dll</HintPath>
       <Private>True</Private>
@@ -140,11 +144,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Application\Pages\Home\home-tmpl.html" />
+    <Content Include="Application\Pages\Flights\Views\index.html" />
+    <Content Include="Application\Pages\Home\Views\index.html" />
+    <Content Include="Application\Pages\Hotels\Views\index.html" />
+    <Content Include="Application\UI\DropDown\DropDownTemplate.html" />
     <Content Include="Assets\Icons\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-72x72-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-precomposed.png" />
     <Content Include="Assets\Icons\favicon.ico" />
+    <Content Include="Assets\Images\Patterns\bg-section.png" />
     <Content Include="Assets\Libs\AngularJS\angular-animate.js" />
     <Content Include="Assets\Libs\AngularJS\angular-cookies.js" />
     <Content Include="Assets\Libs\AngularJS\angular-loader.js" />
@@ -192,8 +200,15 @@
     <Content Include="Assets\Styles\grid.scss" />
     <Content Include="Assets\Styles\mixin.scss" />
     <Content Include="Assets\Styles\reset.scss" />
-    <Content Include="Assets\Styles\main.scss" />
+    <Content Include="Assets\Styles\layout.scss" />
     <Content Include="Assets\Styles\variables.scss" />
+    <Content Include="App_ConfigSources\AppSettings.config" />
+    <Content Include="Assets\Styles\header.scss" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Assets\Styles\footer.scss" />
+    <Content Include="Assets\Styles\Components\tickets-offers.scss" />
+    <Content Include="Assets\Styles\UI\dropdown.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -219,25 +234,40 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FlightsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HotelsController.cs" />
     <Compile Include="Controllers\TranslationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Flights\SpecialOfferModel.cs" />
+    <Compile Include="Models\Flights\SpecialOfferRouteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Application\Pages\Flights\Models\" />
+    <Folder Include="Assets\Images\Dividers\" />
     <Folder Include="Assets\Libs\RequireJS\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Application\main.ts" />
-    <TypeScriptCompile Include="Application\Pages\Home\home-ctrl.ts" />
-    <TypeScriptCompile Include="Application\Pages\Layout\layout-ctrl.ts" />
-    <TypeScriptCompile Include="Application\reference.ts" />
-    <TypeScriptCompile Include="Application\routes.ts" />
-    <TypeScriptCompile Include="Application\Services\data-service.ts" />
+    <TypeScriptCompile Include="Application\Main.ts" />
+    <TypeScriptCompile Include="Application\Pages\Flights\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Home\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Home\Controllers\SpecialOffersCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferRouteModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Layout\Controllers\RegionSelectorCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Layout\Controllers\LayoutCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Layout\Models\RegionModel.ts" />
+    <TypeScriptCompile Include="Application\Prototypes\Date.ts" />
+    <TypeScriptCompile Include="Application\Prototypes\String.ts" />
+    <TypeScriptCompile Include="Application\Reference.ts" />
+    <TypeScriptCompile Include="Application\Routes.ts" />
+    <TypeScriptCompile Include="Application\Services\DataService.ts" />
+    <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\DropDown\DropDownScopeDeclaration.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-mocks.d.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-resource.d.ts" />
