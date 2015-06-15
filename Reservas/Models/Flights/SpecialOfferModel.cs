@@ -7,7 +7,7 @@ namespace Reservas.Models.Flights
 		#region Constructors
 
 		/// <summary>
-		/// Конструктор класса
+		/// Class constructor with parameters
 		/// </summary>
 		/// <param name="item"></param>
 		/// <param name="xnamespace"></param>

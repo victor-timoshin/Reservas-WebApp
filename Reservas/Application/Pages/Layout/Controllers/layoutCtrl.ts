@@ -25,4 +25,5 @@ module Controllers {
 	}
 
 	Main.App.Controllers.controller('LayoutCtrl', LayoutController);
+
 }

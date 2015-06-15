@@ -91,7 +91,7 @@ $container-lg: $container-large-desktop;
 	}
 }
 
-//@include make-grid-columns();
+@include make-grid-columns();
 
 @mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
 	@for $i from (1 + 1) through $grid-columns {

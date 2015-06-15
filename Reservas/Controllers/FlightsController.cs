@@ -12,13 +12,21 @@ namespace Reservas.Controllers
 {
 	public class FlightsController : ApiController
 	{
+		public string serverUri = ConfigurationManager.AppSettings["API:FLIGHTS:ROOT_URL"];
+
+		/// <summary>
+		/// Get special offers from airlines.
+		/// </summary>
+		/// <param name="airlineCode">IATA code of the airline operating the flight.</param>
+		/// <param name="limit">Records limit per page.</param>
+		/// <returns></returns>
 		[HttpGet, AcceptVerbs("GET")]
-		public HttpResponseMessage GetSpecialOffers(string airlineCode = "AY", int limit = 100)
+		public HttpResponseMessage GetSpecialOffers(string airlineCode, int limit)
 		{
 			Dictionary<string, List<SpecialOfferModel>> offers = new Dictionary<string, List<SpecialOfferModel>>();
 
-			var url = string.Format("{0}/prices/special-offers", ConfigurationManager.AppSettings["API2:FLIGHTS:ROOT_URL"]);
-			XDocument document = XmlRequestHelper.GetObjectXML(url, ConfigurationManager.AppSettings["API:TOKEN"]);
+			var relativePath = "v2/prices/special-offers";
+			XDocument document = XmlRequestHelper.GetObjectXML(serverUri, relativePath, ConfigurationManager.AppSettings["API:TOKEN"]);
 
 			XNamespace xnamespace = document.Root.Name.Namespace;
 			foreach (XElement item in document.Root.Elements(xnamespace + "offer"))

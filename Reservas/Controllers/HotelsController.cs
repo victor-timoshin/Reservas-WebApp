@@ -14,6 +14,8 @@ namespace Reservas.Controllers
 {
 	public class HotelsController : ApiController
 	{
+		public string serverUri = ConfigurationManager.AppSettings["API:HOTELS:ROOT_URL"];
+
 		[HttpGet]
 		public async Task<HttpResponseMessage> GetSearch(string iata, string checkIn, string checkOut, string lang)
 		{
@@ -57,8 +59,7 @@ namespace Reservas.Controllers
 			str = str + "marker=" + ConfigurationManager.AppSettings["API:MARKER"] + "&";
 			str = str + "signature=" + signatureData;
 
-			dynamic accessData = JsonRequestHelper.GetObjectRest<dynamic>(string.Format("{0}/search/start.json?{1}",
-				ConfigurationManager.AppSettings["API2:HOTELS:ROOT_URL"], str), string.Empty);
+			dynamic accessData = JsonRequestHelper.GetObjectRest<dynamic>(serverUri, string.Format("api/v2/search/start.json?{0}", str), string.Empty);
 
 			string searchId = (string)accessData.searchId;
 
@@ -84,11 +85,10 @@ namespace Reservas.Controllers
 
 			string signatureDataTest = BitConverter.ToString(encodedBytesTest).Replace("-", "").ToLower();
 
-			dynamic data = await JsonRequestHelper.GetObjectRestAsync<dynamic>(string.Format("{0}/search/getResult.json?searchId={1}&limit=10&sortBy=price&sortAsc=1&marker={2}&signature={3}",
-				ConfigurationManager.AppSettings["API2:HOTELS:ROOT_URL"],
-				searchId,
-				ConfigurationManager.AppSettings["API:MARKER"],
-				signatureDataTest));
+			dynamic data = await JsonRequestHelper.GetObjectRestAsync<dynamic>(serverUri, string.Format("api/v2/search/getResult.json?searchId={0}&limit=10&sortBy=price&sortAsc=1&marker={1}&signature={2}", searchId, ConfigurationManager.AppSettings["API:MARKER"], signatureDataTest));
+
+			if (data == null)
+				return Request.CreateResponse(HttpStatusCode.NotFound);
 
 			return Request.CreateResponse(HttpStatusCode.OK, data as object);
 		}

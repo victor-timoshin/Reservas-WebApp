@@ -1,4 +1,7 @@
 ﻿/// <reference path='../Reference.ts' />
+/// <reference path='../Utils.ts' />
+
+/// <reference path='../Pages/Home/Models/SpecialOfferModel.ts' />
 
 'use strict';
 
@@ -35,9 +38,16 @@ module Services {
 			return defer.promise;
 		}
 
-		public getSpecialOffers(successCallback: Function): void {
-			this.getDataFromBackend<any>('/Api/Flights/GetSpecialOffers?airlineCode=&limit=12').then(function (data) {
-				successCallback(data);
+		/**
+		 * Get special offers from airlines.
+		 *
+		 * @param airlineCode {string} IATA code of the airline operating the flight.
+		 * @param limit {number} Records limit per page.
+		 */
+		public getSpecialOffers(airlineCode: string, limit: number, successCallback: Function): void {
+			var url: string = '';
+			this.getDataFromBackend<Array<SpecialOfferModel>>(url.format('/Api/Flights/GetSpecialOffers?airlineCode={0}&limit={1}', airlineCode, limit)).then(function (offers) {
+				successCallback(offers);
 			});
 		}
 

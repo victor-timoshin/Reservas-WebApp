@@ -23,7 +23,7 @@ module Controllers {
 		private loadSpecialOffers($scope: ISpecialOffersControllerScope, dataService: Services.DataService):void {
 			var self = this;
 
-			dataService.getSpecialOffers(function (offers: Array<SpecialOfferModel>) {
+			dataService.getSpecialOffers('', 12, function (offers: Array<SpecialOfferModel>) {
 				for (var i = 0; i < offers.length; i += 1) {
 					$scope.offers.push(offers[i]);
 				}
