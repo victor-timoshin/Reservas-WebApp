@@ -19,3 +19,6 @@ App_ConfigSources/
 /Reservas/Application/Pages/*/*.js.map
 /Reservas/Application/Pages/*/*/*.js
 /Reservas/Application/Pages/*/*/*.js.map
+
+/Reservas/Application/UI/*/*.js
+/Reservas/Application/UI/*/*.js.map

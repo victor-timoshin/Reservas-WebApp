@@ -1,10 +1,15 @@
 /// <reference path='../../Reference.ts' />
-/// <reference path='DropDownScopeDeclaration.ts' />
 'use strict';
 var App;
 (function (App) {
     var UI;
     (function (UI) {
+        var DropDownScopeDecl = (function () {
+            function DropDownScopeDecl() {
+            }
+            return DropDownScopeDecl;
+        })();
+        UI.DropDownScopeDecl = DropDownScopeDecl;
         var DropDownDirective = (function () {
             function DropDownDirective() {
                 var self = this;
@@ -12,9 +17,9 @@ var App;
                 self.templateUrl = '/Application/UI/DropDown/DropDownTemplate.html';
                 self.transclude = true;
                 self.replace = true;
-                self.scope = new UI.DropDownScopeDeclaration();
+                self.scope = new DropDownScopeDecl();
                 self.scope.title = '@';
-                self.link = function (originalScope, instanceElement, instanceAttributes, controller) {
+                self.link = function (dropDownScope, instanceElement, instanceAttributes, controller) {
                     instanceElement.bind('mouseenter', function () {
                         instanceElement.addClass('open');
                     });
@@ -28,7 +33,6 @@ var App;
                 var directive = function () {
                     return new DropDownDirective();
                 };
-                //directive.$inject = [];
                 return directive;
             };
             return DropDownDirective;

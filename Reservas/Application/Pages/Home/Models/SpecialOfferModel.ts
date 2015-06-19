@@ -3,7 +3,7 @@
 'use strict';
 
 class SpecialOfferModel {
-	public id: number;
+	public id: number; /* Unique identifier. */
 	public airline: string;
 	public airlineCode: string;
 	public conditions: string;

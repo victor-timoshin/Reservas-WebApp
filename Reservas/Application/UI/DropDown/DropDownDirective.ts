@@ -1,11 +1,14 @@
 ﻿/// <reference path='../../Reference.ts' />
-/// <reference path='DropDownScopeDeclaration.ts' />
 
 'use strict';
 
 module App.UI {
 
 	export interface IDropDownScope extends angular.IScope {
+	}
+
+	export class DropDownScopeDecl {
+		public title: string;
 	}
 
 	export class DropDownDirective implements angular.IDirective {
@@ -16,7 +19,7 @@ module App.UI {
 		public restrict: string;
 		public transclude: boolean;
 		public replace: boolean;
-		public scope: DropDownScopeDeclaration;
+		public scope: DropDownScopeDecl;
 		public link: angular.IDirectiveLinkFn;
 
 		//#endregion
@@ -26,7 +29,6 @@ module App.UI {
 				return new DropDownDirective();
 			}
 
-			//directive.$inject = [];
 			return directive;
 		}
 
@@ -37,9 +39,9 @@ module App.UI {
 			self.templateUrl = '/Application/UI/DropDown/DropDownTemplate.html';
 			self.transclude = true;
 			self.replace = true;
-			self.scope = new DropDownScopeDeclaration();
+			self.scope = new DropDownScopeDecl();
 			self.scope.title = '@';
-			self.link = (originalScope: IDropDownScope, instanceElement: angular.IAugmentedJQuery, instanceAttributes: angular.IAttributes, controller: angular.INgModelController) => {
+			self.link = (dropDownScope: IDropDownScope, instanceElement: angular.IAugmentedJQuery, instanceAttributes: angular.IAttributes, controller: angular.INgModelController) => {
 				instanceElement.bind('mouseenter', function () {
 					instanceElement.addClass('open');
 				});

@@ -148,6 +148,7 @@
     <Content Include="Application\Pages\Home\Views\index.html" />
     <Content Include="Application\Pages\Hotels\Views\index.html" />
     <Content Include="Application\UI\DropDown\DropDownTemplate.html" />
+    <Content Include="Application\UI\Tabs\TabsTemplate.html" />
     <Content Include="Assets\Icons\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-72x72-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-precomposed.png" />
@@ -209,6 +210,7 @@
     <Content Include="Assets\Styles\footer.scss" />
     <Content Include="Assets\Styles\Components\tickets-offers.scss" />
     <Content Include="Assets\Styles\UI\dropdown.scss" />
+    <Content Include="Assets\Styles\UI\tabs.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -254,6 +256,7 @@
     <TypeScriptCompile Include="Application\Main.ts" />
     <TypeScriptCompile Include="Application\Pages\Flights\Controllers\IndexCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Home\Controllers\SearchFormCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\SpecialOffersCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferRouteModel.ts" />
@@ -265,9 +268,13 @@
     <TypeScriptCompile Include="Application\Prototypes\String.ts" />
     <TypeScriptCompile Include="Application\Reference.ts" />
     <TypeScriptCompile Include="Application\Routes.ts" />
+    <TypeScriptCompile Include="Application\Services\DataService.Tests.ts" />
     <TypeScriptCompile Include="Application\Services\DataService.ts" />
+    <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.Tests.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.ts" />
-    <TypeScriptCompile Include="Application\UI\DropDown\DropDownScopeDeclaration.ts" />
+    <TypeScriptCompile Include="Application\UI\Tabs\TabDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\Tabs\TabsController.ts" />
+    <TypeScriptCompile Include="Application\UI\Tabs\TabsDirective.ts" />
     <TypeScriptCompile Include="Application\Utils.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-mocks.d.ts" />
@@ -293,6 +300,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Page.ru.designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

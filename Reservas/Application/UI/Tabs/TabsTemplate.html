@@ -1,0 +1,9 @@
+﻿<div>
+	<ul class="ui-tabs-nav list-unstyled clearfix" role="tablist">
+		<li data-ng-repeat="tab in tabs" data-ng-class="{'ui-tab-active': tab.active}" role="tab">
+			<a href data-ng-click="select(tab)" class="ui-tab-anchor" role="presentation">{{tab.title}}</a>
+		</li>
+	</ul>
+
+	<div data-ng-transclude class="ui-tabs-content"></div>
+</div>

@@ -8,23 +8,23 @@
 module Services {
 
 	export class DataService {
-		public static $inject: Array<string> = ['$http', '$q', '$cookies', '$log'];
+		public static $inject: Array<string> = ['$http', '$q'/*, '$cookies'*/, '$log'];
 
 		private httpService: angular.IHttpService;
 		private qService: angular.IQService;
 		private logService: angular.ILogService;
 		private lang: string;
 
-		public static Factory($http: angular.IHttpService, $q: angular.IQService, $cookies: any, $log: angular.ILogService) {
-			return new DataService($http, $q, $cookies, $log);
+		public static Factory($http: angular.IHttpService, $q: angular.IQService/*, $cookies: any*/, $log: angular.ILogService) {
+			return new DataService($http, $q/*, $cookies*/, $log);
 		}
 
-		public constructor($http: angular.IHttpService, $q: angular.IQService, $cookies: any, $log: angular.ILogService) {
+		public constructor($http: angular.IHttpService, $q: angular.IQService/*, $cookies: any*/, $log: angular.ILogService) {
 			this.httpService = $http;
 			this.qService = $q;
 			this.logService = $log;
 
-			this.lang = $cookies.__APPLICATION_LANGUAGE;
+			//this.lang = $cookies.__APPLICATION_LANGUAGE;
 		}
 
 		private getDataFromBackend<T>(url: string, params?: any): angular.IPromise<T> {

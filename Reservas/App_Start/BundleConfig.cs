@@ -17,7 +17,7 @@ namespace Reservas
 			bundles.ResetAll();
 
 			bundles.IgnoreList.Clear();
-			bundles.IgnoreList.Ignore("*.tests.js", OptimizationMode.WhenEnabled);
+			bundles.IgnoreList.Ignore("*.Tests.js", OptimizationMode.WhenEnabled);
 
 			BundleTable.EnableOptimizations = true;
 
@@ -54,6 +54,8 @@ namespace Reservas
 			BundleTable.Bundles.Add(mainStyles);
 
 			#endregion
+
+			bundles.Add(new ScriptBundle("~/scripts/app-ui").IncludeDirectory("~/Application/UI", "*.js", true));
 		}
 	}
 }

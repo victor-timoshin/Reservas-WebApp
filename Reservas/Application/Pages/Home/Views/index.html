@@ -1,6 +1,31 @@
 ﻿<section class="special-offers-section">
 	<div class="container">
 
+		<div data-ng-controller="SearchFormCtrl" class="row">
+			<div class="col-xs-16 col-sm-16 col-md-16 col-lg-16">
+
+				<div data-ui-tabs class="ui-tabs">
+					<div data-ui-tab id="tab1" data-title="{{ 'FLIGHTS' | translate }}">
+
+						<!--  Form -->
+						<form name="searchForm" role="form" novalidate>
+							<div class="search-form__main-params">
+								<fieldset></fieldset>
+							</div>
+
+							<div class="search-form__more-params">
+								<fieldset></fieldset>
+							</div>
+						</form>
+						<!-- /Form -->
+
+					</div>
+					<div data-ui-tab id="tab2" data-title="{{ 'HOTELS' | translate }}">tab content 2</div>
+				</div>
+
+			</div>
+		</div>
+
 		<div data-ng-controller="SpecialOffersCtrl" class="row">
 			<h1 class="title" data-translate="SPECIAL_OFFERS_TITLE"></h1>
 
