@@ -82,7 +82,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #475155;
+	background-color: #000;
 	border: 3px solid transparent;
 	@include border-radius(3px);
 	@include padding-box();

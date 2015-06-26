@@ -1,1 +1,39 @@
-﻿<h1>hotels</h1>
+﻿<div class="container">
+	<div class="row">
+		<div class="col-xs-16 col-sm-16 col-md-16 col-lg-16">
+			<ul id="hotels-listing" class="list-unstyled clearfix">
+				<li data-ng-repeat="(hotelKey, hotel) in viewModel.listHotels">
+					<article id="hotel-item-{{hotel.id}}">
+
+						<figure class="hotel-image">
+
+							<!--  UI Image directive -->
+							<div data-ui-image data-index="1" data-dimensions="150" id="{{hotel.id}}"></div>
+							<!--  UI Image directive -->
+
+							<div class="hotel-image-count">
+								<span class="hotel-image-count-value" data-ng-bind="hotel.photoCount"></span>
+							</div>
+						</figure>
+
+						<div class="hotel-content">
+							<div class="hotel-content-header">
+								<div style=" display: table-cell;">
+									<div class="hotel-content-header-title">
+										<a href="#" class="hotel-content-header-title-link" title="Цены на {{hotel.name}}" target="_blank" data-ng-bind="hotel.name"></a>
+									</div>
+								</div>
+
+								<div class="hotel-content-additional pull-right">
+									<a data-ng-click="onShowDetails(hotelKey)" data-ng-toggle-sidebar class="btn btn-rounded readmore">Подробнее</a>
+									<a href="{{hotel.fullUrl}}" class="btn btn-rounded" target="_blank">Забронировать</a>
+								</div>
+
+							</div>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+﻿$radio-bg-pressed: #5d9598;
+$radio-border-pressed: #5d9598;
+
+ul.radio-btn-group {
+	padding: 17px 0 15px;
+	clear: both;
+	overflow: hidden;
+
+	li {
+		font-size: 13px;
+		line-height: 15px;
+		float: left;
+		margin: 0 20px 0 0;
+
+		label.radio {
+			padding-left: 30px;
+			margin: 0 0 5px;
+			position: relative;
+			cursor: pointer;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				@include border-radius(50%);
+				height: 16px;
+				width: 16px;
+				left: 3px;
+				bottom: 0;
+				@include transition(all .3s ease);
+			}
+
+			&:before {
+				border: 2px solid #555;
+			}
+
+			&.checked:before {
+				border-color: $radio-border-pressed;
+			}
+
+			&:after {
+				background-color: $radio-bg-pressed;
+				@include scale(0);
+			}
+
+			&.checked:after {
+				@include scale(.5);
+			}
+
+			input[type='radio'] {
+				position: absolute;
+				@include opacity(0);
+			}
+		}
+	}
+}

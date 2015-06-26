@@ -1,33 +1,171 @@
-﻿<section class="special-offers-section">
+﻿<section id="content-block-background-1321" class="content-block-background parallax-fixed">
 	<div class="container">
+		<div class="row">
+			<div class="col-xs-16 col-sm-16 col-md-16 col-lg-10">
+				<div data-ng-controller="SearchFormCtrl" class="search-form__wrapper">
 
-		<div data-ng-controller="SearchFormCtrl" class="row">
-			<div class="col-xs-16 col-sm-16 col-md-16 col-lg-16">
+					<!--  UI Tabs directive -->
+					<div data-ui-tabs class="ui-tabs">
+						<!--  UI Tab directive -->
+						<div data-ui-tab id="tab1" data-title="{{ 'FLIGHTS' | translate }}">
 
-				<div data-ui-tabs class="ui-tabs">
-					<div data-ui-tab id="tab1" data-title="{{ 'FLIGHTS' | translate }}">
+							<form name="searchForm" role="form" novalidate>
 
-						<!--  Form -->
-						<form name="searchForm" role="form" novalidate>
-							<div class="search-form__main-params">
-								<fieldset></fieldset>
-							</div>
+								<ul class="radio-btn-group list-unstyled">
+									<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ONE_WAY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'oneway'"></div></li>
+									<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ROUND_TRIP' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'roundtrip'"></div></li>
+									<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__MULTI_CITY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'multicity'"></div></li>
+								</ul>
 
-							<div class="search-form__more-params">
-								<fieldset></fieldset>
-							</div>
-						</form>
-						<!-- /Form -->
+								<div class="search-form__main-params">
 
+									<fieldset>
+										<legend style="display:none;">Места</legend>
+
+										<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
+											<label for="departure" class="header-input-title">Город или аэропорт вылета</label>
+											<input type="text" id="departure" name="departure" placeholder="Откуда">
+										</div>
+
+										<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
+											<label for="arrival" class="header-input-title">Город или аэропорт прилета</label>
+											<input type="text" id="arrival" name="arrival" placeholder="Куда">
+										</div>
+									</fieldset>
+
+									<fieldset>
+										<legend style="display:none;">Даты</legend>
+
+										<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip'">
+											<label for="fromDate" class="header-input-title">Дата вылета</label>
+											<input type="text" data-ui-date-picker data-ng-model="filterData.departDate" data-ng-required="true" name="fromDate" id="fromDate" placeholder="Когда вылет?">
+										</div>
+
+										<div class="header-input-container" data-ng-show="complexity.value === 'roundtrip'">
+											<label for="toDate" class="header-input-title">Дата обратного перелета</label>
+											<input type="text" name="toDate" id="toDate" placeholder="Когда обратно?">
+										</div>
+									</fieldset>
+
+								</div>
+								<div class="search-form__more-params">
+
+									<!--  UI DropDown directive -->
+									<div data-ui-dropdown class="region-switcher">
+
+										<a href="" class="dropdown-toggle">
+											<span class="rooms">
+												<span class="number">1</span>
+											</span>
+											<span class="adults">
+												<span class="number">2</span>
+											</span>
+											<span class="children">
+												<span class="number">0</span>
+											</span>
+										</a>
+
+										<div class="dropdown-container" style="width: 190px;">
+											<ul class="dropdown-menu" role="menu">
+												<li class="counter-dropdown" role="presentation">
+													<p>Rooms</p>
+													<div class="form-counts">
+														<a href="javascript:void(0)" class="btn-less btn-more-less">-</a>
+														<p class="counter" id="room-counter" data-type="rooms">1</p>
+														<a href="javascript:void(0)" class="btn-more btn-more-less">+</a>
+													</div>
+												</li>
+
+												<li class="counter-dropdown" role="presentation">
+													<p>Adults</p>
+													<div class="form-counts">
+														<a href="javascript:void(0)" class="btn-less btn-more-less">-</a>
+														<p class="counter" id="room-counter" data-type="rooms">1</p>
+														<a href="javascript:void(0)" class="btn-more btn-more-less">+</a>
+													</div>
+												</li>
+
+												<li class="counter-dropdown" role="presentation">
+													<p>Children</p>
+													<div class="form-counts">
+														<a href="javascript:void(0)" class="btn-less btn-more-less">-</a>
+														<p class="counter" id="room-counter" data-type="rooms">1</p>
+														<a href="javascript:void(0)" class="btn-more btn-more-less">+</a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- /UI DropDown directive -->
+
+								</div>
+
+								<input data-ng-click="executeSearch(searchForm)" type="submit" value="найти билеты" class="btn btn-default pull-right" id="header-submit" />
+								<div class="clearfix"></div>
+							</form>
+
+						</div>
+						<!-- /UI Tab directive -->
+
+						<!--  UI Tab directive -->
+						<div data-ui-tab id="tab2" data-title="{{ 'HOTELS' | translate }}">
+
+							<form name="searchForm" novalidate data-ng-submit="events.executeQuery(searchForm)" role="form">
+								<fieldset style="float: none; width: auto;">
+
+									<div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+										<label for="cityName">Введите название города или отеля</label>
+										<div class="input-group">
+											<input type="text" name="cityName" id="cityName" class="form-control" role="textbox">
+										</div>
+									</div>
+
+									<div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+										<label for="checkIn">Дата заезда</label>
+										<div class="input-group">
+											<input type="text" name="checkIn" id="checkIn" class="form-control" placeholder="Когда вылет?">
+										</div>
+									</div>
+
+									<div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+										<label for="checkOut">Дата выезда</label>
+										<div class="input-group">
+											<input type="text" name="checkOut" id="checkOut" class="form-control" placeholder="Когда обратно?">
+										</div>
+									</div>
+
+									<div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+										<label>Размещение</label>
+										<input type="text" class="form-control" placeholder="2 взрослых">
+									</div>
+
+								</fieldset>
+
+								<input type="submit" id="submit" data-ng-disabled="searchForm.$invalid" value="Найти отели" class="btn btn-default pull-right" />
+							</form>
+
+						</div>
+						<!-- /UI Tab directive -->
 					</div>
-					<div data-ui-tab id="tab2" data-title="{{ 'HOTELS' | translate }}">tab content 2</div>
-				</div>
+					<!-- /UI Tabs directive -->
 
+				</div>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section id="content-block-background-1532" class="content-block-background parallax-none">
+	<div class="container"></div>
+</section>
+
+<section class="special-offers-section">
+	<div class="container">
 
 		<div data-ng-controller="SpecialOffersCtrl" class="row">
-			<h1 class="title" data-translate="SPECIAL_OFFERS_TITLE"></h1>
+			<h1 class="title" title="{{ 'SPECIAL_OFFERS_TITLE' | translate }}">
+				<span data-translate="SPECIAL_OFFERS_TITLE"></span>
+			</h1>
 
 			<div data-ng-repeat="offer in offers" class="col-xs-16 col-sm-8 col-md-8 col-lg-4">
 				<div class="ticket-special-offer">
@@ -45,6 +183,7 @@
 					<div class="airline-price">
 						<div data-ng-bind="offer.route.onewayPrice"></div>
 						<div data-ng-bind="offer.route.roundtripPrice"></div>
+						<span class="rub">Р</span>
 					</div>
 
 				</div>

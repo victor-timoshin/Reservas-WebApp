@@ -1,0 +1,26 @@
+﻿@import "~/Assets/Styles/mixin.scss";
+
+$color-form: #f8f6ed;
+
+.search-form__wrapper {
+	background-image: linear-gradient(#9bc4d4, #57a8c8);
+	background-image: linear-gradient(#FF7149, #A62103);
+	padding: 5px 0;
+	box-shadow: 0 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+
+	padding: 5px 0;
+
+	.ui-tabs {
+		ul.ui-tabs-nav {
+			li.ui-tab-active {
+				background-color: $color-form !important;
+			}
+		}
+	}
+}
+
+form[name='searchForm'] {
+	background-color: $color-form;
+	padding: 7px 15px;
+}

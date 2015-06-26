@@ -12,11 +12,13 @@
 							<span data-translate="CHANGE_REGION_TITLE"></span>
 							<span class="current">{{currentRegion.name}}</span>
 						</a>
-						<ul class="dropdown-menu">
-							<li data-ng-repeat="region in regions" data-ng-click="setRegion($index)">
-								<a href="" data-code="{{region.code}}">{{region.name}}</a>
-							</li>
-						</ul>
+						<div class="dropdown-container">
+							<ul class="dropdown-menu" role="menu">
+								<li data-ng-repeat="region in regions" data-ng-click="setRegion($index)" role="presentation">
+									<a href="" data-code="{{region.code}}">{{region.name}}</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					<!-- /UI DropDown directive -->
 

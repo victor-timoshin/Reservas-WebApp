@@ -7,6 +7,8 @@ module Controllers {
 
 	export interface ISearchFormControllerScope extends angular.IScope {
 		executeSearch: (submit: any) => any;
+
+		complexity: any;
 	}
 
 	export class SearchFormController {
@@ -17,7 +19,23 @@ module Controllers {
 
 			$scope.executeSearch = function (form) {
 				console.log(form);
+				console.log($scope.complexity);
+
+				switch ($scope.complexity) {
+					case 'oneway':
+						break;
+
+					case 'roundtrip':
+						break;
+
+					case 'multicity':
+						break;
+				}
+
+				$location.path('/hotels');
 			}
+
+			$scope.complexity = { value: 'roundtrip' };
 		}
 	}
 

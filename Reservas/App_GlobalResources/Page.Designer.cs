@@ -142,6 +142,33 @@ namespace Reservas.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Multi-city.
+        /// </summary>
+        public static string SEARCH_FORM__MULTI_CITY {
+            get {
+                return ResourceManager.GetString("SEARCH_FORM__MULTI_CITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One way.
+        /// </summary>
+        public static string SEARCH_FORM__ONE_WAY {
+            get {
+                return ResourceManager.GetString("SEARCH_FORM__ONE_WAY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Round trip.
+        /// </summary>
+        public static string SEARCH_FORM__ROUND_TRIP {
+            get {
+                return ResourceManager.GetString("SEARCH_FORM__ROUND_TRIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Special offers from airlines.
         /// </summary>
         public static string SPECIAL_OFFERS_TITLE {

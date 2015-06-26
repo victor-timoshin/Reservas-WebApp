@@ -144,6 +144,15 @@
   <data name="REGION_SELECTOR_DESC" xml:space="preserve">
     <value>Выбор другого региона приведет к изменению языка и/или содержимого страниц веб-сайта.</value>
   </data>
+  <data name="SEARCH_FORM__MULTI_CITY" xml:space="preserve">
+    <value>Сложный маршрут</value>
+  </data>
+  <data name="SEARCH_FORM__ONE_WAY" xml:space="preserve">
+    <value>В одну сторону</value>
+  </data>
+  <data name="SEARCH_FORM__ROUND_TRIP" xml:space="preserve">
+    <value>В обе стороны</value>
+  </data>
   <data name="SPECIAL_OFFERS_TITLE" xml:space="preserve">
     <value>Специальные предложения от авиакомпаний</value>
   </data>

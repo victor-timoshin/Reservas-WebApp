@@ -10,7 +10,14 @@ header[role='banner'].site-header {
 	position: relative;
 
 	&:after {
-		background: url('data:image/svg+xml;utf8,<svg version="1.1" id="waves_layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g id="waves"><path fill="none" stroke="#{$box-background-color}" stroke-miterlimit="10" d="M100,21.7c-12,0-18.1,5.7-24.4,11.6c-6.2,5.8-12.4,11.9-25.1,11.9c-12.7,0-19.3-6-25.6-11.9C18.6,27.4,13,21.7,0,21.7"/><path fill="#{$box-background-color}" d="M0,0v15.9c15,0,19.8,5.4,26,10.6c6.4,5.3,12.7,10.4,25.1,10.4c12.4,0,17.8-5,24.2-10.4c6.2-5.2,12.9-10.6,24.8-10.6V0H0z" /></g></svg>') repeat-x center center;
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g>\
+					<path fill="none" stroke="#{$box-background-color}" stroke-width="0" stroke-miterlimit="10" d="M100,21.7c-12,0-18.1,5.7-24.4,11.6c-6.2,5.8-12.4,11.9-25.1,11.9c-12.7,0-19.3-6-25.6-11.9C18.6,27.4,13,21.7,0,21.7"/>\
+					<path fill="#{$box-background-color}" d="M0,0v15.9c15,0,19.8,5.4,26,10.6c6.4,5.3,12.7,10.4,25.1,10.4c12.4,0,17.8-5,24.2-10.4c6.2-5.2,12.9-10.6,24.8-10.6V0H0z" />\
+				</g>\
+			</svg>') repeat-x center center;
+
 		background-position: left 0px bottom 0px;
 		content: '';
 		position: absolute;

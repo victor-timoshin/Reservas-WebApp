@@ -11,7 +11,6 @@ module Controllers {
 	export class HomeController {
 		public static $inject: Array<string> = ['$scope', '$location'];
 		public constructor($scope: IHomeControllerScope, $location: angular.ILocationService) {
-			//$location.path('/flights');
 		}
 	}
 

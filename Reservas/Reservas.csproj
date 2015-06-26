@@ -148,12 +148,12 @@
     <Content Include="Application\Pages\Home\Views\index.html" />
     <Content Include="Application\Pages\Hotels\Views\index.html" />
     <Content Include="Application\UI\DropDown\DropDownTemplate.html" />
+    <Content Include="Application\UI\RadioBtn\RadioBtnTemplate.html" />
     <Content Include="Application\UI\Tabs\TabsTemplate.html" />
     <Content Include="Assets\Icons\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-72x72-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-precomposed.png" />
     <Content Include="Assets\Icons\favicon.ico" />
-    <Content Include="Assets\Images\Patterns\bg-section.png" />
     <Content Include="Assets\Libs\AngularJS\angular-animate.js" />
     <Content Include="Assets\Libs\AngularJS\angular-cookies.js" />
     <Content Include="Assets\Libs\AngularJS\angular-loader.js" />
@@ -211,6 +211,12 @@
     <Content Include="Assets\Styles\Components\tickets-offers.scss" />
     <Content Include="Assets\Styles\UI\dropdown.scss" />
     <Content Include="Assets\Styles\UI\tabs.scss" />
+    <Content Include="Assets\Styles\UI\radio-btn.scss" />
+    <Content Include="Assets\Styles\UI\forms.scss" />
+    <Content Include="Assets\Styles\Components\search-form.scss" />
+    <Content Include="Assets\Styles\Components\hotels.scss" />
+    <Content Include="Assets\Images\Patterns\background-1321.ai" />
+    <Content Include="Assets\Images\Patterns\background-4572.ai" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -253,7 +259,10 @@
     <Folder Include="Assets\Libs\RequireJS\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Application\Directives\IncludeReplaceDirective.ts" />
+    <TypeScriptCompile Include="Application\Directives\ImageDirective.ts" />
     <TypeScriptCompile Include="Application\Main.ts" />
+    <TypeScriptCompile Include="Application\Pages\BaseController.ts" />
     <TypeScriptCompile Include="Application\Pages\Flights\Controllers\IndexCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\IndexCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\SearchFormCtrl.ts" />
@@ -261,6 +270,12 @@
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferRouteModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Models\AmenityModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Models\HotelModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Models\LocationModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Models\RoomModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Models\RoomOptionsModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\ViewModels\SearchViewModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Layout\Controllers\RegionSelectorCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Layout\Controllers\LayoutCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Layout\Models\RegionModel.ts" />
@@ -272,9 +287,13 @@
     <TypeScriptCompile Include="Application\Services\DataService.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.Tests.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnController.ts" />
+    <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnDirective.Tests.ts" />
+    <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnDirective.ts" />
     <TypeScriptCompile Include="Application\UI\Tabs\TabDirective.ts" />
     <TypeScriptCompile Include="Application\UI\Tabs\TabsController.ts" />
     <TypeScriptCompile Include="Application\UI\Tabs\TabsDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\Types.ts" />
     <TypeScriptCompile Include="Application\Utils.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Assets\Typings\AngularJS\angular-mocks.d.ts" />

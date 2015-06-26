@@ -58,14 +58,21 @@
 	font-style: italic;
 }
 
+/* ==========================================================
+## 
+============================================================= */
+
+$text-color: rgba(0, 0, 0, .8);
+$text-color-reversed: rgba(255, 255, 255, .6);
+
 $font-family-base: 'Clear Sans', Arial, sans-serif;
 $font-size-base: 14px;
 
 $line-height-base: 1.428571429;
 
-/* ==========================================================
-## 
-============================================================= */
-
-$body-bg: #f8f6ed; //#F1EEE0
+$body-bg: #f8f6ed;
 $box-background-color: #475155;
+
+//background-image: linear-gradient(#7ACBBA, #EFF3C0);
+//background-image: linear-gradient(#CF5347, #EFF3C0);
+//background-image: linear-gradient(#F5D84E, #D8C9B2);

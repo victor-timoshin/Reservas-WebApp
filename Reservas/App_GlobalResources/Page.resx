@@ -144,6 +144,15 @@
   <data name="REGION_SELECTOR_DESC" xml:space="preserve">
     <value>Selecting a region changes the language and/or content</value>
   </data>
+  <data name="SEARCH_FORM__MULTI_CITY" xml:space="preserve">
+    <value>Multi-city</value>
+  </data>
+  <data name="SEARCH_FORM__ONE_WAY" xml:space="preserve">
+    <value>One way</value>
+  </data>
+  <data name="SEARCH_FORM__ROUND_TRIP" xml:space="preserve">
+    <value>Round trip</value>
+  </data>
   <data name="SPECIAL_OFFERS_TITLE" xml:space="preserve">
     <value>Special offers from airlines</value>
   </data>

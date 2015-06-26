@@ -59,7 +59,7 @@ namespace Reservas.Controllers
 			str = str + "marker=" + ConfigurationManager.AppSettings["API:MARKER"] + "&";
 			str = str + "signature=" + signatureData;
 
-			dynamic accessData = JsonRequestHelper.GetObjectRest<dynamic>(serverUri, string.Format("api/v2/search/start.json?{0}", str), string.Empty);
+			dynamic accessData = JsonRequestHelper.GetObjectRest<dynamic>(serverUri, string.Format("api/v2/search/start.json?{0}", str));
 
 			string searchId = (string)accessData.searchId;
 
