@@ -2,15 +2,17 @@
 ## IMPORTS
 ============================================================= */
 
-@import "~/Assets/Styles/reset.scss";
-@import "~/Assets/Styles/variables.scss";
-@import "~/Assets/Styles/grid.scss";
-@import "~/Assets/Styles/mixin.scss";
+@import "reset.scss";
+@import "variables.scss";
+@import "grid.scss";
+@import "mixin.scss";
 
+@import "~/Assets/Styles/UI/buttons.scss";
+@import "~/Assets/Styles/UI/radio-btn.scss";
 @import "~/Assets/Styles/UI/forms.scss";
+@import "~/Assets/Styles/UI/autocomplete.scss";
 @import "~/Assets/Styles/UI/dropdown.scss";
 @import "~/Assets/Styles/UI/tabs.scss";
-@import "~/Assets/Styles/UI/radio-btn.scss";
 
 @import "~/Assets/Styles/header.scss";
 @import "~/Assets/Styles/footer.scss";
@@ -30,7 +32,7 @@ body {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 300;
-	line-height: 20px;
+	line-height: $line-height-base;
 	-webkit-font-smoothing: antialiased;
 
 	/// background-4572

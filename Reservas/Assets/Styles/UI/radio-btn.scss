@@ -1,5 +1,5 @@
-﻿$radio-bg-pressed: #5d9598;
-$radio-border-pressed: #5d9598;
+﻿@import "../variables.scss";
+@import "../mixin.scss";
 
 ul.radio-btn-group {
 	padding: 17px 0 15px;
@@ -22,7 +22,7 @@ ul.radio-btn-group {
 			&:after {
 				content: '';
 				position: absolute;
-				@include border-radius(50%);
+				@include border-radius($border-radius-circle);
 				height: 16px;
 				width: 16px;
 				left: 3px;

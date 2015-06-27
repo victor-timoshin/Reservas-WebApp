@@ -12,7 +12,7 @@ module Main {
 			}
 		});
 
-		$routeProvider.when('/flights', {
+		$routeProvider.when('/flights/:q', {
 			templateUrl: 'Application/Pages/Flights/Views/index.html',
 			controller: 'Flights.IndexCtrl',
 			dara: {
@@ -20,7 +20,7 @@ module Main {
 			}
 		});
 
-		$routeProvider.when('/hotels', {
+		$routeProvider.when('/hotels/:q', {
 			templateUrl: 'Application/Pages/Hotels/Views/index.html',
 			controller: 'Hotels.IndexCtrl',
 			data: {

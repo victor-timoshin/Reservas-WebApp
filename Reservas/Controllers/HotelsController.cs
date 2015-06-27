@@ -17,14 +17,14 @@ namespace Reservas.Controllers
 		public string serverUri = ConfigurationManager.AppSettings["API:HOTELS:ROOT_URL"];
 
 		[HttpGet]
-		public async Task<HttpResponseMessage> GetSearch(string iata, string checkIn, string checkOut, string lang)
+		public async Task<HttpResponseMessage> GetSearch(string iata, string checkIn, string checkOut, int adultsCount, int childrenCount, string lang)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
 			dictionary.Add("iata", iata);
 			dictionary.Add("checkIn", checkIn);
 			dictionary.Add("checkOut", checkOut);
-			dictionary.Add("adultsCount", "2");
-			dictionary.Add("childrenCount", "1");
+			dictionary.Add("adultsCount", adultsCount.ToString());
+			dictionary.Add("childrenCount", childrenCount.ToString());
 			dictionary.Add("lang", lang);
 			dictionary.Add("currency", "RUB");
 			dictionary.Add("timeout", "20");
@@ -50,8 +50,8 @@ namespace Reservas.Controllers
 			str = str + "iata=" + iata + "&";
 			str = str + "checkIn=" + checkIn + "&";
 			str = str + "checkOut=" + checkOut + "&";
-			str = str + "adultsCount=" + "2" + "&";
-			str = str + "childrenCount=" + "1" + "&";
+			str = str + "adultsCount=" + adultsCount.ToString() + "&";
+			str = str + "childrenCount=" + childrenCount.ToString() + "&";
 			str = str + "lang=" + lang + "&";
 			str = str + "currency=" + "RUB" + "&";
 			str = str + "timeout=" + "20" + "&";

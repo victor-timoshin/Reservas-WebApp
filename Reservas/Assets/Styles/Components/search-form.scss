@@ -1,4 +1,5 @@
-﻿@import "~/Assets/Styles/mixin.scss";
+﻿@import "../variables.scss";
+@import "../mixin.scss";
 
 $color-form: #f8f6ed;
 
@@ -7,7 +8,7 @@ $color-form: #f8f6ed;
 	background-image: linear-gradient(#FF7149, #A62103);
 	padding: 5px 0;
 	box-shadow: 0 0px 25px rgba(0, 0, 0, 0.2);
-	border-radius: 3px;
+	@include border-radius($border-radius-base);
 
 	padding: 5px 0;
 

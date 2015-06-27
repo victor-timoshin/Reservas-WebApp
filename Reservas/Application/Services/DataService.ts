@@ -51,9 +51,16 @@ module Services {
 			});
 		}
 
-		public getHotels(iata: string, checkIn: string, checkOut: string, successCallback: Function): angular.IPromise<any> {
+		public getAutocomplete(name: string, lang: string, successCallback: Function): angular.IPromise<any> {
 			var url: string = '';
-			return this.getDataFromBackend<any>(url.format('/Api/hotels/GetSearch?iata={0}&checkIn={1}&checkOut={2}&lang={3}', iata, checkIn, checkOut, this.lang)).then(function (resourceData) {
+			return this.getDataFromBackend<any>(url.format('/Api/Static/Autocomplete?name={0}&translation={1}', name, lang)).then(function (data) {
+				successCallback(data);
+			});
+		}
+
+		public getHotels(iata: string, checkIn: string, checkOut: string, adultsCount: number, childrenCount: number, successCallback: Function): angular.IPromise<any> {
+			var url: string = '';
+			return this.getDataFromBackend<any>(url.format('/Api/hotels/GetSearch?iata={0}&checkIn={1}&checkOut={2}&adultsCount={3}&childrenCount={4}&lang={5}', iata, checkIn, checkOut, adultsCount, childrenCount, this.lang)).then(function (resourceData) {
 				successCallback(resourceData.result);
 			});
 		}

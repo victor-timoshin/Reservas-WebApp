@@ -1,7 +1,10 @@
-﻿.region-switcher {
+﻿@import "../variables.scss";
+@import "../mixin.scss";
+
+.region-switcher {
 	position: relative;
 	display: inline-block;
-	@include border-radius(2px);
+	@include border-radius($border-radius-base);
 
 	a.dropdown-toggle {
 		color: #fff;
@@ -22,13 +25,13 @@
 		right: auto;
 		bottom: 100%;
 		z-index: 1000;
-		@include border-radius(3px);
+		@include border-radius($border-radius-base);
 
 		ul.dropdown-menu {
 			padding: 15px;
 			margin: 5px;
 			border: 1px dashed #f2e19b;
-			@include border-radius(3px);
+			@include border-radius($border-radius-base);
 
 			li {
 				  overflow: hidden;

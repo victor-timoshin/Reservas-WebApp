@@ -20,19 +20,20 @@ module Controllers {
 	}
 
 	export class HotelsControllers extends Main.Controllers.BaseController<App.Hotels.ViewModels.SearchViewModel> implements IIndexController {
-		public static $inject: Array<string> = ['$scope', 'dataService'];
+		public static $inject: Array<string> = ['$scope', '$routeParams', 'dataService'];
 
 		public amenities: Array<App.Hotels.Models.AmenityModel>;
 		public roomTypes: Array<any>;
 
 		public constructor(
 			private $scope: IHotelsControllerScope,
+			private $routeParams: angular.route.IRouteParamsService,
 			private dataService: Services.DataService) {
 
 			super($scope, App.Hotels.ViewModels.SearchViewModel);
 			var self = this;
 
-			dataService.getHotels('MOW', '2015-06-28', '2015-07-18', function (data) {
+			dataService.getHotels('MOW', '2015-06-28', '2015-07-18', 1, 0, function (data) {
 				self.viewModel.listHotels = data;
 			});
 

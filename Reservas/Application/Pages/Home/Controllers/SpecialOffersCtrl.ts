@@ -11,10 +11,11 @@ module Controllers {
 	}
 
 	export class SpecialOffersController {
-		public static $inject: Array<string> = ['$scope', '$route', '$routeParams', '$location', 'dataService'];
+		public static $inject: Array<string> = ['$scope', 'dataService'];
 
-		public constructor($scope: ISpecialOffersControllerScope, $route: angular.route.IRouteService,
-			$routeParams: angular.route.IRouteParamsService, $location: angular.ILocationService, dataService: Services.DataService) {
+		public constructor(
+			private $scope: ISpecialOffersControllerScope,
+			private dataService: Services.DataService) {
 
 			$scope.offers = [];
 			this.loadSpecialOffers($scope, dataService);

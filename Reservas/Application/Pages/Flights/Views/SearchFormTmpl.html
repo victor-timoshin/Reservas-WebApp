@@ -1,0 +1,98 @@
+﻿<div data-ng-controller="Flights.SearchFormCtrl">
+	<form name="searchForm" novalidate data-ng-submit="events.executeQuery(searchForm)" role="form">
+
+		<ul class="radio-btn-group list-unstyled">
+			<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ONE_WAY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'oneway'"></div></li>
+			<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ROUND_TRIP' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'roundtrip'"></div></li>
+			<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__MULTI_CITY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'multicity'"></div></li>
+		</ul>
+
+		<div class="search-form__main-params">
+
+			<fieldset>
+				<legend style="display:none;">Места</legend>
+
+				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
+					<label for="departure" class="header-input-title">Город или аэропорт вылета</label>
+					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.origin" type="text" id="departure" name="departure" placeholder="Откуда">
+				</div>
+
+				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
+					<label for="arrival" class="header-input-title">Город или аэропорт прилета</label>
+					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.destination" type="text" id="arrival" name="arrival" placeholder="Куда">
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend style="display:none;">Даты</legend>
+
+				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip'">
+					<label for="fromDate" class="header-input-title">Дата вылета</label>
+					<input type="text" name="fromDate" id="fromDate" placeholder="Когда вылет?">
+				</div>
+
+				<div class="header-input-container" data-ng-show="complexity.value === 'roundtrip'">
+					<label for="toDate" class="header-input-title">Дата обратного перелета</label>
+					<input type="text" name="toDate" id="toDate" placeholder="Когда обратно?">
+				</div>
+			</fieldset>
+
+		</div>
+
+		<div class="search-form__more-params">
+
+			<!--  UI DropDown directive -->
+			<div data-ui-dropdown class="region-switcher">
+
+				<a href="" class="dropdown-toggle">
+					<span class="rooms">
+						<span class="number">1</span>
+					</span>
+					<span class="adults">
+						<span class="number">2</span>
+					</span>
+					<span class="children">
+						<span class="number">0</span>
+					</span>
+				</a>
+
+				<div class="dropdown-container" style="width: 190px;">
+					<ul class="dropdown-menu" role="menu">
+						<li class="counter-dropdown" role="presentation">
+							<p>Rooms</p>
+							<div class="form-counts">
+								<a href="javascript:void(0)" class="btn-less btn-more-less">-</a>
+								<p class="counter" id="room-counter" data-type="rooms">1</p>
+								<a href="javascript:void(0)" class="btn-more btn-more-less">+</a>
+							</div>
+						</li>
+
+						<li class="counter-dropdown" role="presentation">
+							<p>Adults</p>
+							<div class="form-counts">
+								<a href="javascript:void(0)" class="btn-less btn-more-less">-</a>
+								<p class="counter" id="room-counter" data-type="rooms">1</p>
+								<a href="javascript:void(0)" class="btn-more btn-more-less">+</a>
+							</div>
+						</li>
+
+						<li class="counter-dropdown" role="presentation">
+							<p>Children</p>
+							<div class="form-counts">
+								<a href="javascript:void(0)" class="btn-less btn-more-less">-</a>
+								<p class="counter" id="room-counter" data-type="rooms">1</p>
+								<a href="javascript:void(0)" class="btn-more btn-more-less">+</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- /UI DropDown directive -->
+
+		</div>
+
+		<input type="submit" data-ng-disabled="searchForm.$invalid" value="найти билеты" class="btn pull-right" />
+		<div class="clearfix"></div>
+	</form>
+</div>

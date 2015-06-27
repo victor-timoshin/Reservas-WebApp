@@ -144,9 +144,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Application\Pages\Flights\Views\index.html" />
+    <Content Include="Application\Pages\Flights\Views\Index.html" />
+    <Content Include="Application\Pages\Flights\Views\SearchFormTmpl.html" />
     <Content Include="Application\Pages\Home\Views\index.html" />
-    <Content Include="Application\Pages\Hotels\Views\index.html" />
+    <Content Include="Application\Pages\Hotels\Views\Index.html" />
+    <Content Include="Application\Pages\Hotels\Views\SearchFormTmpl.html" />
+    <Content Include="Application\UI\Autocomplete\AutocompletePopupTemplate.html" />
+    <Content Include="Application\UI\Autocomplete\AutocompleteTemplate.html" />
     <Content Include="Application\UI\DropDown\DropDownTemplate.html" />
     <Content Include="Application\UI\RadioBtn\RadioBtnTemplate.html" />
     <Content Include="Application\UI\Tabs\TabsTemplate.html" />
@@ -217,6 +221,10 @@
     <Content Include="Assets\Styles\Components\hotels.scss" />
     <Content Include="Assets\Images\Patterns\background-1321.ai" />
     <Content Include="Assets\Images\Patterns\background-4572.ai" />
+    <Content Include="Assets\Json\cities.json" />
+    <Content Include="Assets\Json\countries.json" />
+    <Content Include="Assets\Styles\UI\autocomplete.scss" />
+    <Content Include="Assets\Styles\UI\buttons.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -245,12 +253,16 @@
     <Compile Include="Controllers\FlightsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelsController.cs" />
+    <Compile Include="Controllers\StaticController.cs" />
     <Compile Include="Controllers\TranslationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Flights\SpecialOfferModel.cs" />
     <Compile Include="Models\Flights\SpecialOfferRouteModel.cs" />
+    <Compile Include="Models\Static\AutocompleteModel.cs" />
+    <Compile Include="Models\Static\CityModel.cs" />
+    <Compile Include="Models\Static\CountryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -264,9 +276,11 @@
     <TypeScriptCompile Include="Application\Main.ts" />
     <TypeScriptCompile Include="Application\Pages\BaseController.ts" />
     <TypeScriptCompile Include="Application\Pages\Flights\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Flights\Controllers\SearchFormCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\IndexCtrl.ts" />
-    <TypeScriptCompile Include="Application\Pages\Home\Controllers\SearchFormCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\SearchFormCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\SpecialOffersCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Home\Models\SearchDataModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferRouteModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\IndexCtrl.ts" />
@@ -285,6 +299,9 @@
     <TypeScriptCompile Include="Application\Routes.ts" />
     <TypeScriptCompile Include="Application\Services\DataService.Tests.ts" />
     <TypeScriptCompile Include="Application\Services\DataService.ts" />
+    <TypeScriptCompile Include="Application\UI\Autocomplete\AutocompleteDirective.Tests.ts" />
+    <TypeScriptCompile Include="Application\UI\Autocomplete\AutocompleteDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\Autocomplete\AutocompletePopupDirective.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.Tests.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.ts" />
     <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnController.ts" />

@@ -1,4 +1,7 @@
-﻿$hotel-item-bg: #f1eee0;
+﻿@import "../variables.scss";
+@import "../mixin.scss";
+
+$hotel-item-bg: #f1eee0;
 $hotel-item-border-color: #f1eee0;
 
 ul#hotels-listing {
