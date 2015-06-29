@@ -6,8 +6,11 @@ module Main.Controllers {
 		public scope: angular.IScope;
 		public viewModel: T;
 
-		public constructor(scope: angular.IScope, ModelType: { new (): T; }) {
-			this.scope = scope;
+		public constructor(
+			public $scope: angular.IScope,
+			public ModelType: { new (): T; }) {
+
+			this.scope = $scope;
 			this.viewModel = new ModelType();
 
 			this.scope['viewModel'] = this.viewModel;

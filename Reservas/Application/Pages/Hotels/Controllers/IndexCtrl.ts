@@ -26,9 +26,9 @@ module Controllers {
 		public roomTypes: Array<any>;
 
 		public constructor(
-			private $scope: IHotelsControllerScope,
-			private $routeParams: angular.route.IRouteParamsService,
-			private dataService: Services.DataService) {
+			public $scope: IHotelsControllerScope,
+			public $routeParams: angular.route.IRouteParamsService,
+			public dataService: Services.DataService) {
 
 			super($scope, App.Hotels.ViewModels.SearchViewModel);
 			var self = this;

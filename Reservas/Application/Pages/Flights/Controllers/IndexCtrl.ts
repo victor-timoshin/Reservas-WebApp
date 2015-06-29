@@ -10,7 +10,7 @@ module Controllers {
 
 	export class FlightsController {
 		public static $inject: Array<string> = ['$scope'];
-		public constructor($scope: IFlightsControllerScope) {
+		public constructor(public $scope: IFlightsControllerScope) {
 		}
 	}
 

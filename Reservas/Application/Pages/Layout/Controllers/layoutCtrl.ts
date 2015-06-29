@@ -11,8 +11,13 @@ module Controllers {
 
 	export class LayoutController {
 		public static $inject: Array<string> = ['$scope', '$route', '$routeParams', '$location', '$cookies', '$translate'];
-		public constructor($scope: ILayoutControllerScope, $route: angular.route.IRouteService,
-			$routeParams: angular.route.IRouteParamsService, $location: angular.ILocationService, $cookies: any, $translate: angular.translate.ITranslateService) {
+		public constructor(
+			public $scope: ILayoutControllerScope,
+			public $route: angular.route.IRouteService,
+			public $routeParams: angular.route.IRouteParamsService,
+			public $location: angular.ILocationService,
+			public $cookies: any,
+			public $translate: angular.translate.ITranslateService) {
 
 			var lang = $cookies.__APPLICATION_LANGUAGE || 'ru';
 			$cookies.__APPLICATION_LANGUAGE = lang;

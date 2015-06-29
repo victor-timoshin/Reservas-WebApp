@@ -23,8 +23,13 @@ module Main {
 	export class RegionSelectorController {
 		public static $inject: Array<string> = ['$scope', '$route', '$routeParams', '$location', '$cookies', '$translate'];
 
-		public constructor($scope: IRegionSelectorControllerScope, $route: angular.route.IRouteService,
-			$routeParams: angular.route.IRouteParamsService, $location: angular.ILocationService, $cookies: any, $translate: angular.translate.ITranslateService) {
+		public constructor(
+			public $scope: IRegionSelectorControllerScope,
+			public $route: angular.route.IRouteService,
+			public $routeParams: angular.route.IRouteParamsService,
+			public $location: angular.ILocationService,
+			public $cookies: any,
+			public $translate: angular.translate.ITranslateService) {
 
 			$scope.regions = [
 				{ code: 'ru', name: 'Русский' },

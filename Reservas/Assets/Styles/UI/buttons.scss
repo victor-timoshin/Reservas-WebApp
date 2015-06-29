@@ -1,4 +1,5 @@
 ﻿@import "../variables.scss";
+@import "../mixin.scss";
 
 .btn {
 	display: inline-block;
@@ -12,13 +13,9 @@
 	border: 1px solid transparent;
 	white-space: nowrap;
 
-	//.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
 	padding: $padding-base-vertical $padding-base-horizontal;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
-	border-radius: $border-radius-base;
-
-
-
-	//.user-select(none);
+	@include border-radius($border-radius-base);
+	@include noselect();
 }

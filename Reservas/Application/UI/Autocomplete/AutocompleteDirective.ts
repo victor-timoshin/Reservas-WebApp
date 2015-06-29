@@ -36,9 +36,9 @@ module App.UI {
 		}
 
 		public constructor(
-			private dataService: Services.DataService,
-			private $compile: angular.ICompileService,
-			private _: UnderscoreStatic) {
+			public dataService: Services.DataService,
+			public $compile: angular.ICompileService,
+			public _: UnderscoreStatic) {
 
 			var self = this;
 

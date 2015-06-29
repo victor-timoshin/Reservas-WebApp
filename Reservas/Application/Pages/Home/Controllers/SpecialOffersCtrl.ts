@@ -14,8 +14,8 @@ module Controllers {
 		public static $inject: Array<string> = ['$scope', 'dataService'];
 
 		public constructor(
-			private $scope: ISpecialOffersControllerScope,
-			private dataService: Services.DataService) {
+			public $scope: ISpecialOffersControllerScope,
+			public dataService: Services.DataService) {
 
 			$scope.offers = [];
 			this.loadSpecialOffers($scope, dataService);

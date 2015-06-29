@@ -10,7 +10,9 @@ module Controllers {
 
 	export class HomeController {
 		public static $inject: Array<string> = ['$scope', '$location'];
-		public constructor($scope: IHomeControllerScope, $location: angular.ILocationService) {
+		public constructor(
+			public $scope: IHomeControllerScope,
+			public $location: angular.ILocationService) {
 		}
 	}
 

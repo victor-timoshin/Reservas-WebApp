@@ -147,6 +147,7 @@
     <Content Include="Application\Pages\Flights\Views\Index.html" />
     <Content Include="Application\Pages\Flights\Views\SearchFormTmpl.html" />
     <Content Include="Application\Pages\Home\Views\index.html" />
+    <Content Include="Application\Pages\Hotels\Views\DetailTmpl.html" />
     <Content Include="Application\Pages\Hotels\Views\Index.html" />
     <Content Include="Application\Pages\Hotels\Views\SearchFormTmpl.html" />
     <Content Include="Application\UI\Autocomplete\AutocompletePopupTemplate.html" />
@@ -266,7 +267,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Application\Pages\Flights\Models\" />
     <Folder Include="Assets\Images\Dividers\" />
     <Folder Include="Assets\Libs\RequireJS\" />
   </ItemGroup>
@@ -277,10 +277,11 @@
     <TypeScriptCompile Include="Application\Pages\BaseController.ts" />
     <TypeScriptCompile Include="Application\Pages\Flights\Controllers\IndexCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Flights\Controllers\SearchFormCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Flights\Models\SearchDataModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\DetailCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\SearchFormCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Controllers\SpecialOffersCtrl.ts" />
-    <TypeScriptCompile Include="Application\Pages\Home\Models\SearchDataModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferRouteModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\IndexCtrl.ts" />
@@ -289,6 +290,8 @@
     <TypeScriptCompile Include="Application\Pages\Hotels\Models\LocationModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Models\RoomModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Models\RoomOptionsModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\Models\SearchDataModel.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\ViewModels\DetailViewModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\ViewModels\SearchViewModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Layout\Controllers\RegionSelectorCtrl.ts" />
     <TypeScriptCompile Include="Application\Pages\Layout\Controllers\LayoutCtrl.ts" />

@@ -14,7 +14,7 @@ module App.UI {
 		public static $inject: Array<string> = ['$scope'];
 		public scope: ITabsControllerScope;
 
-		public constructor($scope: ITabsControllerScope) {
+		public constructor(public $scope: ITabsControllerScope) {
 			this.scope = $scope;
 			this.scope.tabs = [];
 		}

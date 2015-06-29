@@ -14,12 +14,12 @@
 
 				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
 					<label for="departure" class="header-input-title">Город или аэропорт вылета</label>
-					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.origin" type="text" id="departure" name="departure" placeholder="Откуда">
+					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.src" type="text" id="departure" name="departure" placeholder="Откуда">
 				</div>
 
 				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
 					<label for="arrival" class="header-input-title">Город или аэропорт прилета</label>
-					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.destination" type="text" id="arrival" name="arrival" placeholder="Куда">
+					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.dst" type="text" id="arrival" name="arrival" placeholder="Куда">
 				</div>
 			</fieldset>
 

@@ -13,7 +13,7 @@ module App.UI {
 
 	export class RadioBtnController {
 		public static $inject: Array<string> = ['$scope'];
-		public constructor(private $scope: IRadioBtnControllerScope) {
+		public constructor(public $scope: IRadioBtnControllerScope) {
 			$scope.checked = function () {
 				return $scope.value === $scope.model;
 			};
