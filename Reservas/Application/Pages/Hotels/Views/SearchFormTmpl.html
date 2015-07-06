@@ -1,40 +1,59 @@
 ﻿<div data-ng-controller="Hotels.SearchFormCtrl">
-	
-	<div class="results"></div>
-	
-	<form name="searchForm" novalidate data-ng-submit="events.executeQuery(searchForm)" role="form">
-		<fieldset>
-			<div class="col-xs-16 col-sm-16 col-md-16 col-lg-16">
-				<label for="cityName">Введите название города или отеля</label>
-				<div class="search-form__field-inner">
-					<input type="text" name="cityName" id="cityName" class="form-control" role="textbox">
-				</div>
-			</div>
-		</fieldset>
 
-		<fieldset>
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-				<label for="checkIn">Дата заезда</label>
-				<div class="search-form__field-inner">
-					<input type="text" name="checkIn" id="checkIn" class="form-control" placeholder="Когда вылет?">
-				</div>
-			</div>
+	<div class="results" data-ng-if="usefulClass(['hotels'], 'use')==='use'" data-ng-class="usefulClass(['hotels'], 'use')">
+		<div class="results__flight">Москва - Сан-Франциско</div>
+		<div class="results__info">14 июня - 9 июля, 1  взрослый, эконом-класс</div>
+		<a href="#" class="results__change-search" id="change-search">Изменить поиск</a>
+	</div>
 
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-				<label for="checkOut">Дата выезда</label>
-				<div class="search-form__field-inner">
-					<input type="text" name="checkOut" id="checkOut" class="form-control" placeholder="Когда обратно?">
-				</div>
-			</div>
-		</fieldset>
+	<div class="ui-vintage-widget">
+		<div class="ui-vintage-widget-content">
+			<form class="search-form" name="searchForm" novalidate data-ng-submit="events.executeQuery(searchForm)" role="form">
+				<fieldset>
+					<div class="form-group col-xs-16 col-sm-16 col-md-16 col-lg-16">
+						<label for="cityName">Введите название города или отеля</label>
+						<div class="search-form__field-inner">
+							<input type="text" name="cityName" id="cityName" class="form-control" role="textbox">
+						</div>
+					</div>
+				</fieldset>
 
-		<fieldset>
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-				<label>Размещение</label>
-				<input type="text" class="form-control" placeholder="2 взрослых">
-			</div>
-		</fieldset>
+				<fieldset>
+					<div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<label for="checkIn">Дата заезда</label>
+						<div class="search-form__field-inner">
+							<input type="text" name="checkIn" id="checkIn" class="form-control" placeholder="Когда вылет?">
+						</div>
+					</div>
 
-		<input type="submit" id="submit" data-ng-disabled="searchForm.$invalid" value="Найти отели" class="btn pull-right" />
-	</form>
+					<div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<label for="checkOut">Дата выезда</label>
+						<div class="search-form__field-inner">
+							<input type="text" name="checkOut" id="checkOut" class="form-control" placeholder="Когда обратно?">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<label>Размещение</label>
+						<input type="text" class="form-control" placeholder="2 взрослых">
+					</div>
+				</fieldset>
+
+				<input type="submit" id="submit" data-ng-disabled="searchForm.$invalid" value="{{'HOTELS_SEARCH_BTN' | translate}}" class="btn pull-right" />
+			</form>
+		</div>
+
+		<div class="ui-vintage-widget-tl"></div>
+		<div class="ui-vintage-widget-tm"></div>
+		<div class="ui-vintage-widget-tr"></div>
+
+		<div class="ui-vintage-widget-bl"></div>
+		<div class="ui-vintage-widget-bm"></div>
+		<div class="ui-vintage-widget-br"></div>
+
+		<div class="ui-vintage-widget-cl"></div>
+		<div class="ui-vintage-widget-cr"></div>
+	</div>
 </div>

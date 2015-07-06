@@ -1,8 +1,6 @@
 ﻿@import "../variables.scss";
 @import "../mixin.scss";
-
-$hotel-item-bg: #f1eee0;
-$hotel-item-border-color: #f1eee0;
+@import "../Mixins/image.scss";
 
 ul#hotels-listing {
 	&:focus {
@@ -54,13 +52,11 @@ article[id*='hotel-item-'] > .hotel-content {
 	padding-left: 0;
 	display: table;
 	width: 74%;
-	width: -webkit-calc(~'100% - 170px') !important; /* Safari 6, Chrome 19+ */
-	width: -moz-calc(~'100% - 170px') !important; /* Firefox 4+ */
-	width: calc(~'100% - 170px') !important; /* Firefox 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers */
+	@include calc('width', '100% - 170px');
 }
 
 .hotel-content-header {
-		display: table-row;
+	display: table-row;
 
 	.hotel-content-header-title {
 		position: relative;
@@ -68,7 +64,6 @@ article[id*='hotel-item-'] > .hotel-content {
 
 		.hotel-content-header-title-link {
 			color: #333;
-			font-size: 18px;
 			font-weight: 300;
 			text-overflow: ellipsis;
 			margin: 0 5px 0 0;

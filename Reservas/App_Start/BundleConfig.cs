@@ -46,7 +46,7 @@ namespace Reservas
 			#region Main
 
 			var mainStyles = new Bundle("~/styles/main");
-			mainStyles.IncludeDirectory("~/Assets/Styles", "*.scss");
+			mainStyles.Include("~/Assets/Styles/main.scss");
 			mainStyles.Builder = nullBuilder;
 			mainStyles.Transforms.Add(styleTransformer);
 			mainStyles.Transforms.Add(new CssMinify());

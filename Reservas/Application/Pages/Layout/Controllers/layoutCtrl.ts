@@ -6,7 +6,7 @@
 module Controllers {
 
 	export interface ILayoutControllerScope extends angular.IScope {
-		menuClass: (string) => string;
+		usefulClass: (pages: Array<string>, className: string) => string;
 	}
 
 	export class LayoutController {
@@ -22,9 +22,15 @@ module Controllers {
 			var lang = $cookies.__APPLICATION_LANGUAGE || 'ru';
 			$cookies.__APPLICATION_LANGUAGE = lang;
 
-			$scope.menuClass = function (page) {
+			$scope.usefulClass = function (pages: Array<string>, className: string) {
 				var current = $location.path().substring(1);
-				return page === current ? 'active' : '';
+				for (var i = 0; i < pages.length; ++i) {
+					if (pages[i] === current.substr(0, current.lastIndexOf('/'))) {
+						return className;
+					}
+				}
+
+				return '';
 			};
 		}
 	}

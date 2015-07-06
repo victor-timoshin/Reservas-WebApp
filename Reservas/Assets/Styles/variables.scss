@@ -1,66 +1,117 @@
 ﻿/* ==========================================================
-## FONTS
+## Adding custom fonts.
 ============================================================= */
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Regular'), local('ClearSans'), url('/Assets/Fonts/ClearSans/clearsans-regular.woff') format('woff');
+	src: local('Clear Sans Regular'),
+		 local('ClearSans'),
+		 url('/Assets/Fonts/ClearSans/clearsans-regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Thin Regular'), local('ClearSans-Thin'), url('/Assets/Fonts/ClearSans/clearsans-thin.woff') format('woff');
+	src: local('Clear Sans Thin Regular'),
+		 local('ClearSans-Thin'),
+		 url('/Assets/Fonts/ClearSans/clearsans-thin.woff') format('woff');
 	font-weight: 200;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Light Regular'), local('ClearSans-Light'), url('/Assets/Fonts/ClearSans/clearsans-light.woff') format('woff');
+	src: local('Clear Sans Light Regular'),
+		 local('ClearSans-Light'),
+		 url('/Assets/Fonts/ClearSans/clearsans-light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Medium Regular'), local('ClearSans-Medium'), url('/Assets/Fonts/ClearSans/clearsans-medium.woff') format('woff');
+	src: local('Clear Sans Medium Regular'),
+		 local('ClearSans-Medium'),
+		 url('/Assets/Fonts/ClearSans/clearsans-medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Bold'), local('ClearSans-Bold'), url('/Assets/Fonts/ClearSans/clearsans-bold.woff') format('woff');
+	src: local('Clear Sans Bold'),
+		 local('ClearSans-Bold'),
+		 url('/Assets/Fonts/ClearSans/clearsans-bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Italic'), local('ClearSans-Italic'), url('/Assets/Fonts/ClearSans/clearsans-italic.woff') format('woff');
+	src: local('Clear Sans Italic'),
+		 local('ClearSans-Italic'),
+		 url('/Assets/Fonts/ClearSans/clearsans-italic.woff') format('woff');
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Medium Italic'), local('ClearSans-MediumItalic'), url('/Assets/Fonts/ClearSans/clearsans-mediumitalic.woff') format('woff');
+	src: local('Clear Sans Medium Italic'),
+		 local('ClearSans-MediumItalic'),
+		 url('/Assets/Fonts/ClearSans/clearsans-mediumitalic.woff') format('woff');
 	font-weight: 500;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Clear Sans';
-	src: local('Clear Sans Bold Italic'), local('ClearSans-BoldItalic'), url('/Assets/Fonts/ClearSans/clearsans-bolditalic.woff') format('woff');
+	src: local('Clear Sans Bold Italic'),
+		 local('ClearSans-BoldItalic'),
+		 url('/Assets/Fonts/ClearSans/clearsans-bolditalic.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
 }
 
 /* ==========================================================
-## 
+## Grid variables.
 ============================================================= */
+
+$grid-columns: 16;
+$grid-gutter-width: 10px;
+
+/* Extra small screen / phone */
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+
+/* Small screen / tablet */
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+
+$container-tablet: (720px + $grid-gutter-width);
+$container-sm: $container-tablet;
+
+/* Medium screen / desktop */
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+
+$container-desktop: (940px + $grid-gutter-width);
+$container-md: $container-desktop;
+
+/* Large screen / wide desktop */
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+
+$container-large-desktop: (1140px + $grid-gutter-width);
+$container-lg: $container-large-desktop;
+
+/* ==========================================================
+## Common variables.
+============================================================= */
+
+/* Basic colors */
+$color-gold: #f2e19b;
 
 $text-color: rgba(0, 0, 0, .8);
 $text-color-reversed: rgba(255, 255, 255, .6);
@@ -71,6 +122,7 @@ $font-size-base: 14px;
 $line-height-base: 1.428571429;
 
 $body-bg: #f8f6ed;
+//$box-background-color: #493b38;
 $box-background-color: #475155;
 
 $border-radius-base:  4px;
@@ -78,10 +130,9 @@ $border-radius-large: 6px;
 $border-radius-small: 3px;
 $border-radius-circle: 50%;
 
-$padding-base-vertical: 6px;
-$padding-base-horizontal: 12px;
+$padding-base-vertical: 5px;
+$padding-base-horizontal: 10px;
 
-// btn
 $btn-font-weight: normal;
 
 $radio-bg-pressed: #5d9598;
@@ -90,3 +141,20 @@ $radio-border-pressed: #5d9598;
 //background-image: linear-gradient(#7ACBBA, #EFF3C0);
 //background-image: linear-gradient(#CF5347, #EFF3C0);
 //background-image: linear-gradient(#F5D84E, #D8C9B2);
+
+/* ==========================================================
+## Components/HOTELS
+============================================================= */
+
+$hotel-item-bg: #f1eee0;
+$hotel-item-border-color: #f1eee0;
+
+/* ==========================================================
+## Components/SEARCH-FORM
+============================================================= */
+
+$color-form: #f8f6ed;
+
+/* ==========================================================
+## Components/TICETS-OFFERS
+============================================================= */

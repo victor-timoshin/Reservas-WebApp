@@ -1,0 +1,87 @@
+﻿.star-rating {
+	font-size: 14px;
+	padding: 0 .5em;
+	display: inline-block;
+	position: relative;
+
+	padding: 0;
+	display: block;
+
+	a,
+	a:hover {
+		text-decoration: none;
+		cursor: default;
+
+		.fa-star-o {
+			color: #ddd;
+		}
+
+		.fa-star {
+			color: yellow;
+		}
+	}
+}
+
+/* ==========================================================
+## CHECKBOX
+============================================================= */
+
+.star-0 > label,
+.star-1 > label,
+.star-2 > label,
+.star-3 > label,
+.star-4 > label,
+.star-5 > label {
+	display: inline-block;
+
+	> .checkbox-item-count {
+	}
+
+	> .checkbox-item-input {
+	}
+
+	> .checkbox-item-title {
+		display: block;
+		text-indent: -9999em;
+		outline: 0;
+	}
+
+	&:before {
+		content: '\f006\f006\f006\f006\f006';
+		color: #ddd;
+		font: normal normal normal 14px/1 FontAwesome;
+		position: absolute;
+			left: 30px;
+		top: 0;
+		letter-spacing: 3px;
+	}
+
+	&:after {
+		font: normal normal normal 14px/1 FontAwesome;
+		color: #ffbc00;
+		position: absolute;
+		left: 30px;
+		top: 0;
+		letter-spacing: 3px;
+	}
+}
+
+.star-1 > label:after {
+	content: '\f005';
+}
+
+.star-2 > label:after {
+	content: '\f005\f005';
+}
+
+.star-3 > label:after {
+	content: '\f005\f005\f005';
+}
+
+.star-4 > label:after {
+	content: '\f005\f005\f005\f005';
+}
+
+.star-5 > label:after {
+	content: '\f005\f005\f005\f005\f005';
+}

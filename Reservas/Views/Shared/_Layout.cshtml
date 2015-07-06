@@ -32,7 +32,7 @@
 		<script language="javascript" type="text/javascript" src="~/Assets/Libs/jQuery/jquery-1.9.0.js"></script>
 	<![endif]-->
 	<!--[if gte IE 9]><!-->
-		<script language="javascript" type="text/javascript" src="~/Assets/Libs/JQuery/jquery-2.0.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="~/Assets/Libs/JQuery/jquery-2.0.2.min.js"></script>
 	<!--<![endif]-->
 	<!--[if lt IE 9]>
 		<script language="javascript" type="text/javascript" src="~/Assets/Libs/html5shiv.min.js"></script>
@@ -71,11 +71,12 @@
 
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Home/Controllers/IndexCtrl.js"></script>
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Home/Controllers/SpecialOffersCtrl.js"></script>
-	
+
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Flights/Models/SearchDataModel.js"></script>
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Flights/Controllers/SearchFormCtrl.js"></script>
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Flights/Controllers/IndexCtrl.js"></script>
 
+	<script language="javascript" type="text/javascript" src="~/Application/Pages/Hotels/FetcherService.js"></script>
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Hotels/Models/AmenityModel.js"></script>
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Hotels/Models/LocationModel.js"></script>
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Hotels/Models/RoomModel.js"></script>
@@ -89,8 +90,10 @@
 	<script language="javascript" type="text/javascript" src="~/Application/Pages/Hotels/Controllers/DetailCtrl.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/styles/main")" />
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 </head>
-<body data-ng-controller="LayoutCtrl">
+<body data-ng-controller="LayoutCtrl" data-ng-class="usefulClass(['hotels', 'flights'], 'fullscreen')">
 	@Html.Partial("_Header")
 	@RenderBody()
 	@Html.Partial("_Footer")

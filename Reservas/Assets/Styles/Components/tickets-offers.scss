@@ -1,5 +1,6 @@
 ﻿@import "../variables.scss";
 @import "../mixin.scss";
+@import "../Mixins/text.scss";
 
 .ticket-special-offer {
 	color: #5D9598;
@@ -60,11 +61,11 @@
 	}
 
 	.from, .to {
-		color: #FF7149;
+		color: #F89D8B;//#FF7149;
 		font-size: 24px;
 		font-weight: 700;
 		text-transform: uppercase;
-		text-shadow: 1px 1px 0 #F2ECCC, 2px 2px 0 #5E4236;
+		text-shadow: 1px 1px 0 #F2ECCC, 2px 2px 0 #796C63;//#5E4236;
 		letter-spacing: -1px;
 		margin: 0;
 	}
@@ -81,7 +82,7 @@
 		color: #fff;
 		font-size: 21px;
 		font-weight: 700;
-		background-color: #FF7149;
+		background-color: #796C63;//#F89D8B;//#FF7149;
 		margin: 5px -20px;
 		padding: 5px;
 

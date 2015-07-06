@@ -1,0 +1,65 @@
+﻿@import "../variables.scss";
+@import "../mixin.scss";
+
+$map-side-zindex: 1;
+$main-content-zindex: 2;
+$overhead-zindex: 3;
+$site-header-zindex: 4;
+
+header[role='banner'].site-header {
+	z-index: $site-header-zindex;
+}
+
+.overhead {
+	position: relative;
+	z-index: $overhead-zindex;
+}
+
+.main-content {
+	margin: 0 650px 0 0;
+	position: relative;
+	z-index: $main-content-zindex;
+	top: 50px;
+
+	@media (min-width: $screen-sm-min) {
+		margin: 0 350px 0 0;
+	}
+
+	@media (min-width: $screen-md-min) {
+		margin: 0 450px 0 0;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		margin: 0 650px 0 0;
+	}
+
+	.container {
+		width: auto;
+	}
+}
+
+.map-side {
+	background-color: #F1EEE0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	z-index: $map-side-zindex;
+	overflow: hidden;
+
+	@media (min-width: $screen-sm-min) {
+		width: 350px;
+		@include calc(left, '100% - 350px');
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: 450px;
+		@include calc(left, '100% - 450px');
+	}
+
+	@media (min-width: $screen-lg-min) {
+		width: 650px;
+		@include calc(left, '100% - 650px');
+	}
+}

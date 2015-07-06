@@ -1,13 +1,20 @@
-﻿@import "~/Assets/Styles/variables.scss";
-@import "~/Assets/Styles/grid.scss";
+﻿@import "../variables.scss";
 
 header[role='banner'].site-header {
 	background-color: $box-background-color;
-	height: 130px;
+	
 	padding-top: 12px;
 	padding-bottom: 18px;
 	margin-bottom: 32px;
 	position: relative;
+
+	&[collapsible='true'] {
+		height: 292px;
+	}
+
+	&[collapsible='false'] {
+		height: 94px;
+	}
 
 	&:after {
 		background: transparent url('data:image/svg+xml;utf8,\
@@ -26,11 +33,6 @@ header[role='banner'].site-header {
 		display: block;
 		bottom: -32px;
 		z-index: 2;
-	}
-
-	.site-header-container {
-		height: 100px;
-		position: relative;
 	}
 
 	nav[role='navigation'].site-navbar {

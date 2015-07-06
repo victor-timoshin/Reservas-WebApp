@@ -16,13 +16,24 @@ namespace Reservas.Controllers
 	{
 		public string serverUri = ConfigurationManager.AppSettings["API:HOTELS:ROOT_URL"];
 
+		public static string Formatted(string dateTimeStr, string dateTimeFormat)
+		{
+			System.Globalization.CultureInfo cultureInfo = System.Globalization.CultureInfo.InvariantCulture;
+
+			DateTime outputDateTime;
+			if (DateTime.TryParseExact(dateTimeStr, dateTimeFormat, cultureInfo, System.Globalization.DateTimeStyles.None, out outputDateTime))
+				return outputDateTime.ToString("yyyy-MM-dd", cultureInfo);
+
+			return string.Empty;
+		}
+
 		[HttpGet]
 		public async Task<HttpResponseMessage> GetSearch(string iata, string checkIn, string checkOut, int adultsCount, int childrenCount, string lang)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
 			dictionary.Add("iata", iata);
-			dictionary.Add("checkIn", checkIn);
-			dictionary.Add("checkOut", checkOut);
+			dictionary.Add("checkIn", Formatted(checkIn, "yyyyMMdd"));
+			dictionary.Add("checkOut", Formatted(checkOut, "yyyyMMdd"));
 			dictionary.Add("adultsCount", adultsCount.ToString());
 			dictionary.Add("childrenCount", childrenCount.ToString());
 			dictionary.Add("lang", lang);
@@ -47,15 +58,15 @@ namespace Reservas.Controllers
 			string signatureData = BitConverter.ToString(encodedBytes).Replace("-", "").ToLower();
 
 			string str = "";
-			str = str + "iata=" + iata + "&";
-			str = str + "checkIn=" + checkIn + "&";
-			str = str + "checkOut=" + checkOut + "&";
-			str = str + "adultsCount=" + adultsCount.ToString() + "&";
-			str = str + "childrenCount=" + childrenCount.ToString() + "&";
-			str = str + "lang=" + lang + "&";
-			str = str + "currency=" + "RUB" + "&";
-			str = str + "timeout=" + "20" + "&";
-			str = str + "waitForResult=" + "0" + "&";
+			str = str + "iata=" + dictionary["iata"] + "&";
+			str = str + "checkIn=" + dictionary["checkIn"] + "&";
+			str = str + "checkOut=" + dictionary["checkOut"] + "&";
+			str = str + "adultsCount=" + dictionary["adultsCount"] + "&";
+			str = str + "childrenCount=" + dictionary["childrenCount"] + "&";
+			str = str + "lang=" + dictionary["lang"] + "&";
+			str = str + "currency=" + dictionary["currency"] + "&";
+			str = str + "timeout=" + dictionary["timeout"] + "&";
+			str = str + "waitForResult=" + dictionary["waitForResult"] + "&";
 			str = str + "marker=" + ConfigurationManager.AppSettings["API:MARKER"] + "&";
 			str = str + "signature=" + signatureData;
 

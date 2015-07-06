@@ -27,6 +27,8 @@ module Services {
 			this.httpService = $http;
 			this.qService = $q;
 			this.logService = $log;
+
+			this.lang = 'ru';
 		}
 
 		private getDataFromBackend<T>(url: string, params?: any): angular.IPromise<T> {

@@ -106,6 +106,15 @@ namespace Reservas.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Find flights.
+        /// </summary>
+        public static string FLIGHTS_SEARCH_BTN {
+            get {
+                return ResourceManager.GetString("FLIGHTS_SEARCH_BTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Main page.
         /// </summary>
         public static string HOME_TITLE {
@@ -129,6 +138,33 @@ namespace Reservas.App_GlobalResources {
         public static string HOTELS_SEARCH {
             get {
                 return ResourceManager.GetString("HOTELS_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find hotels.
+        /// </summary>
+        public static string HOTELS_SEARCH_BTN {
+            get {
+                return ResourceManager.GetString("HOTELS_SEARCH_BTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No flights found.
+        /// </summary>
+        public static string NO_FLIGHTS_FOUND {
+            get {
+                return ResourceManager.GetString("NO_FLIGHTS_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No hotels found.
+        /// </summary>
+        public static string NO_HOTELS_FOUND {
+            get {
+                return ResourceManager.GetString("NO_HOTELS_FOUND", resourceCulture);
             }
         }
         

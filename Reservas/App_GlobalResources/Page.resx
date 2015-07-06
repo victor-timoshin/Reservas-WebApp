@@ -132,6 +132,9 @@
   <data name="FLIGHTS_SEARCH" xml:space="preserve">
     <value>Search flights</value>
   </data>
+  <data name="FLIGHTS_SEARCH_BTN" xml:space="preserve">
+    <value>Find flights</value>
+  </data>
   <data name="HOME_TITLE" xml:space="preserve">
     <value>Main page</value>
   </data>
@@ -140,6 +143,15 @@
   </data>
   <data name="HOTELS_SEARCH" xml:space="preserve">
     <value>Search hotels</value>
+  </data>
+  <data name="HOTELS_SEARCH_BTN" xml:space="preserve">
+    <value>Find hotels</value>
+  </data>
+  <data name="NO_FLIGHTS_FOUND" xml:space="preserve">
+    <value>No flights found</value>
+  </data>
+  <data name="NO_HOTELS_FOUND" xml:space="preserve">
+    <value>No hotels found</value>
   </data>
   <data name="REGION_SELECTOR_DESC" xml:space="preserve">
     <value>Selecting a region changes the language and/or content</value>

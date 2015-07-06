@@ -1,1 +1,87 @@
-﻿
+﻿<!--  UI PageSlide directive -->
+<div ui-page-slide data-open="checked" data-side="right" data-size="640px" data-custom-top="50px" data-join="inner" class="overhead" style="background-color: #fff;">
+	<div data-ng-controller="Hotels.DetailCtrl" style=" position: relative; overflow: hidden; width: auto; height: 100%;">
+		<div style="position: relative; display: block; height: 100%;">
+
+			<div class="container-fluid padding-none">
+				<div class="row margin-sm-negative">
+					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 padding-none">
+						<div class="row margin-none">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-none">
+								<div class="hotel-single-head">
+									<span class="hotel-single-head-price">от <em class="hotel-single-head-price-value" data-ng-bind="viewModel.details.price"></em> руб. за номер</span>
+									<h1 class="hotel-single-head-title" data-ng-bind="viewModel.details.name"></h1>
+									<!--  UI StarRating directive -->
+									<span data-star-rating data-score="viewModel.details.stars" data-max="5"></span>
+									<!-- /UI StarRating directive -->
+								</div>
+							</div>
+						</div>
+
+						<div class="hotel-gallery-shortcode">
+							<div class="row margin-none" style="padding-bottom: 10px;">
+								<div class="hotel-gallery-shortcode-item col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-sm">
+									<!--  UI Image directive -->
+									<div data-ui-image data-total-count="{{viewModel.details.photoCount}}" data-index="1" data-dimensions="165" id="{{viewModel.details.id}}"></div>
+									<!-- /UI Image directive -->
+								</div>
+								<div class="hotel-gallery-shortcode-item col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-sm">
+									<!--  UI Image directive -->
+									<div data-ui-image data-total-count="{{viewModel.details.photoCount}}" data-index="2" data-dimensions="165" id="{{viewModel.details.id}}"></div>
+									<!-- /UI Image directive -->
+								</div>
+							</div>
+							<div class="row margin-none">
+								<div class="hotel-gallery-shortcode-item col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-sm">
+									<!--  UI Image directive -->
+									<div data-ui-image data-total-count="{{viewModel.details.photoCount}}" data-index="3" data-dimensions="165" id="{{viewModel.details.id}}"></div>
+									<!-- /UI Image directive -->
+								</div>
+								<div class="hotel-gallery-shortcode-item col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-sm">
+									<!--  UI Image directive -->
+									<div data-ui-image data-total-count="{{viewModel.details.photoCount}}" data-index="4" data-dimensions="165" id="{{viewModel.details.id}}"></div>
+									<!-- /UI Image directive -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 padding-sm"></div>
+				</div>
+			</div>
+
+			<div class="hotel-header"></div>
+
+			<div class="hotel-content-inner" data-class-name="hotel-content" style="border-bottom: 1px solid #DDD; padding: 10px 30px;">
+				<ul class="list-unstyled">
+					<li data-ng-repeat="(roomKey, room) in viewModel.details.rooms" class="room-item">
+
+						<div data-ui-collapse title="{{room.desc}}">
+
+							<div class="rooms-item-price">
+								<span class="rooms-item-price-value"><em class="price-value" data-ng-bind="room.total"></em> руб.</span>
+								<span class="rooms-item-price-partner" data-ng-bind="room.agencyName"></span>
+							</div>
+
+							<div class="rooms-item-description">
+								<h4 class="rooms-item-name" data-ng-bind="room.desc"></h4>
+								<span class="rooms-item-conditions">
+									<span class="condition-free-cancellation"><span class="icon"></span>Бесплатная отмена</span>
+									<span class="condition-breakfast"><span class="icon"></span>Завтрак включен</span>
+									<span class="condition-deposit"><span class="icon"></span>Оплата сразу</span>
+								</span>
+							</div>
+
+							<a href="{{room.fullBookingURL}}" class="btn" target="_blank">Забронировать</a>
+
+						</div>
+
+					</li>
+				</ul>
+			</div>
+
+			<div class="hotel-footer"></div>
+		</div>
+	</div>
+</div>
+<!-- /UI PageSlide directive -->

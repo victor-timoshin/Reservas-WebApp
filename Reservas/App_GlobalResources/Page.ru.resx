@@ -132,6 +132,9 @@
   <data name="FLIGHTS_SEARCH" xml:space="preserve">
     <value>Поиск авиабилетов</value>
   </data>
+  <data name="FLIGHTS_SEARCH_BTN" xml:space="preserve">
+    <value>Искать рейсы</value>
+  </data>
   <data name="HOME_TITLE" xml:space="preserve">
     <value>Главная страница</value>
   </data>
@@ -140,6 +143,15 @@
   </data>
   <data name="HOTELS_SEARCH" xml:space="preserve">
     <value>Поиск отелей</value>
+  </data>
+  <data name="HOTELS_SEARCH_BTN" xml:space="preserve">
+    <value>Искать отели</value>
+  </data>
+  <data name="NO_FLIGHTS_FOUND" xml:space="preserve">
+    <value>Рейсов не найдено</value>
+  </data>
+  <data name="NO_HOTELS_FOUND" xml:space="preserve">
+    <value>Отелей не найдено</value>
   </data>
   <data name="REGION_SELECTOR_DESC" xml:space="preserve">
     <value>Выбор другого региона приведет к изменению языка и/или содержимого страниц веб-сайта.</value>

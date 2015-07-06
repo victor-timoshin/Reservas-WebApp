@@ -153,7 +153,10 @@
     <Content Include="Application\UI\Autocomplete\AutocompletePopupTemplate.html" />
     <Content Include="Application\UI\Autocomplete\AutocompleteTemplate.html" />
     <Content Include="Application\UI\DropDown\DropDownTemplate.html" />
+    <Content Include="Application\UI\GoogleMap\GoogleMapTemplate.html" />
+    <Content Include="Application\UI\PageSlide\PageSlideTemplate.html" />
     <Content Include="Application\UI\RadioBtn\RadioBtnTemplate.html" />
+    <Content Include="Application\UI\StarRating\StarRatingTemplate.html" />
     <Content Include="Application\UI\Tabs\TabsTemplate.html" />
     <Content Include="Assets\Icons\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Assets\Icons\apple-touch-icon-72x72-precomposed.png" />
@@ -206,13 +209,13 @@
     <Content Include="Assets\Styles\grid.scss" />
     <Content Include="Assets\Styles\mixin.scss" />
     <Content Include="Assets\Styles\reset.scss" />
-    <Content Include="Assets\Styles\layout.scss" />
+    <Content Include="Assets\Styles\main.scss" />
     <Content Include="Assets\Styles\variables.scss" />
     <Content Include="App_ConfigSources\AppSettings.config" />
-    <Content Include="Assets\Styles\header.scss" />
+    <Content Include="Assets\Styles\Layouts\header.scss" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Assets\Styles\footer.scss" />
+    <Content Include="Assets\Styles\Layouts\footer.scss" />
     <Content Include="Assets\Styles\Components\tickets-offers.scss" />
     <Content Include="Assets\Styles\UI\dropdown.scss" />
     <Content Include="Assets\Styles\UI\tabs.scss" />
@@ -226,6 +229,10 @@
     <Content Include="Assets\Json\countries.json" />
     <Content Include="Assets\Styles\UI\autocomplete.scss" />
     <Content Include="Assets\Styles\UI\buttons.scss" />
+    <Content Include="Assets\Styles\Layouts\hotels.scss" />
+    <Content Include="Assets\Styles\UI\star-rating.scss" />
+    <Content Include="Assets\Styles\Mixins\image.scss" />
+    <Content Include="Assets\Styles\Mixins\text.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -285,6 +292,7 @@
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Home\Models\SpecialOfferRouteModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Application\Pages\Hotels\FetcherService.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Models\AmenityModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Models\HotelModel.ts" />
     <TypeScriptCompile Include="Application\Pages\Hotels\Models\LocationModel.ts" />
@@ -307,9 +315,16 @@
     <TypeScriptCompile Include="Application\UI\Autocomplete\AutocompletePopupDirective.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.Tests.ts" />
     <TypeScriptCompile Include="Application\UI\DropDown\DropDownDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\GoogleMap\GoogleMapDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\GoogleMap\GoogleMapModel.ts" />
+    <TypeScriptCompile Include="Application\UI\GoogleMap\GoogleMapService.ts" />
+    <TypeScriptCompile Include="Application\UI\PageSlide\PageSlideController.ts" />
+    <TypeScriptCompile Include="Application\UI\PageSlide\PageSlideDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\PageSlide\PageSlideTypes.ts" />
     <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnController.ts" />
     <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnDirective.Tests.ts" />
     <TypeScriptCompile Include="Application\UI\RadioBtn\RadioBtnDirective.ts" />
+    <TypeScriptCompile Include="Application\UI\StarRating\StarRatingDirective.ts" />
     <TypeScriptCompile Include="Application\UI\Tabs\TabDirective.ts" />
     <TypeScriptCompile Include="Application\UI\Tabs\TabsController.ts" />
     <TypeScriptCompile Include="Application\UI\Tabs\TabsDirective.ts" />

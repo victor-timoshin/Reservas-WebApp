@@ -2,9 +2,21 @@
 	<form name="searchForm" novalidate data-ng-submit="events.executeQuery(searchForm)" role="form">
 
 		<ul class="radio-btn-group list-unstyled">
-			<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ONE_WAY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'oneway'"></div></li>
-			<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ROUND_TRIP' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'roundtrip'"></div></li>
-			<li><div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__MULTI_CITY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'multicity'"></div></li>
+			<li>
+				<!--  UI RadioBtn directive -->
+				<div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ONE_WAY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'oneway'"></div>
+				<!-- /UI RadioBtn directive -->
+			</li>
+			<li>
+				<!--  UI RadioBtn directive -->
+				<div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__ROUND_TRIP' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'roundtrip'"></div>
+				<!-- /UI RadioBtn directive -->
+			</li>
+			<li>
+				<!--  UI RadioBtn directive -->
+				<div data-ui-radio-btn data-label="{{ 'SEARCH_FORM__MULTI_CITY' | translate }}" data-name="complexity" data-model="complexity.value" data-value="'multicity'"></div>
+				<!-- /UI RadioBtn directive -->
+			</li>
 		</ul>
 
 		<div class="search-form__main-params">
@@ -14,12 +26,18 @@
 
 				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
 					<label for="departure" class="header-input-title">Город или аэропорт вылета</label>
+					
+					<!--  UI Autocomplete directive -->
 					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.src" type="text" id="departure" name="departure" placeholder="Откуда">
+					<!-- /UI Autocomplete directive -->
 				</div>
 
 				<div class="header-input-container" data-ng-show="complexity.value === 'oneway' || complexity.value === 'roundtrip' || complexity.value === 'multicity'">
 					<label for="arrival" class="header-input-title">Город или аэропорт прилета</label>
+					
+					<!--  UI Autocomplete directive -->
 					<input data-ui-autocomplete="autocompleteOptions" data-ng-model="searchData.dst" type="text" id="arrival" name="arrival" placeholder="Куда">
+					<!-- /UI Autocomplete directive -->
 				</div>
 			</fieldset>
 
@@ -92,7 +110,7 @@
 
 		</div>
 
-		<input type="submit" data-ng-disabled="searchForm.$invalid" value="найти билеты" class="btn pull-right" />
+		<input type="submit" data-ng-disabled="searchForm.$invalid" value="{{'FLIGHTS_SEARCH_BTN' | translate}}" class="btn pull-right" />
 		<div class="clearfix"></div>
 	</form>
 </div>

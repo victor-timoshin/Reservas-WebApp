@@ -1,16 +1,47 @@
 ﻿@import "../variables.scss";
 @import "../mixin.scss";
 
-$color-form: #f8f6ed;
+/* ==========================================================
+## RESULTS
+============================================================= */
+
+.results {
+	min-height: 36px;
+	margin-bottom: 20px;
+}
+
+.results__flight {
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.results__info {
+	color: $text-color-reversed;
+	font-size: 1em;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.results__change-search {
+	display: inline-block;
+	border-bottom: 1px dotted $color-gold;
+	color: $color-gold;
+	cursor: pointer;
+	text-decoration: none;
+	vertical-align: top;
+	position: relative;
+}
+
+/* ==========================================================
+## FORM
+============================================================= */
 
 .search-form__wrapper {
 	background-image: linear-gradient(#9bc4d4, #57a8c8);
 	background-image: linear-gradient(#FF7149, #A62103);
-	padding: 5px 0;
-	box-shadow: 0 0px 25px rgba(0, 0, 0, 0.2);
+	padding: 5px;
+	@include box-shadow(0, 0px, 25px, rgba(0, 0, 0, .2), '');
 	@include border-radius($border-radius-base);
-
-	padding: 5px 0;
 
 	.ui-tabs {
 		ul.ui-tabs-nav {
@@ -22,6 +53,196 @@ $color-form: #f8f6ed;
 }
 
 form[name='searchForm'] {
-	background-color: $color-form;
-	padding: 7px 15px;
+	//background-color: $color-form;
+	padding: 10px;
+	position: relative;
+	z-index: 3;
+}
+
+$ui-vintage-widget-padding: 42px;
+
+$ui-vintage-widget-border-radius: 0px;
+
+$ui-vintage-widget-fill-color-0: #F2ECCC;
+$ui-vintage-widget-fill-color-1: #F8F6ED;
+$ui-vintage-widget-fill-color-2: #F8F6ED;
+
+$ui-vintage-widget-stroke-width-0: 2;
+$ui-vintage-widget-stroke-width-1: 4;
+$ui-vintage-widget-stroke-width-2: 6;
+
+$ui-vintage-widget-stroke-color-0: #E6E0C2;
+$ui-vintage-widget-stroke-color-1: #796C63;
+$ui-vintage-widget-stroke-color-2: #E7E1C3;
+
+$ui-vintage-widget-viewbox-offset: $ui-vintage-widget-stroke-width-2 / 2;
+
+.ui-vintage-widget {
+	.ui-vintage-widget-content {
+		background-color: $ui-vintage-widget-fill-color-2;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+.ui-vintage-widget {
+	position: relative;
+	//display: inline-block;
+	padding: $ui-vintage-widget-padding;
+
+	.ui-vintage-widget-tl,
+	.ui-vintage-widget-tr,
+	.ui-vintage-widget-bl,
+	.ui-vintage-widget-br {
+		background-color: $ui-vintage-widget-fill-color-2;
+		position: absolute;
+		width: $ui-vintage-widget-padding;
+		height: $ui-vintage-widget-padding;
+	}
+
+	.ui-vintage-widget-tl {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="-#{$ui-vintage-widget-viewbox-offset} -#{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M0,49c27,0,49-23,49-49h51v100H0V49z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" d="M10,59c27,0,49-23,49-49h41v90H10V59z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" d="M20,69c27,0,49-23,49-49h31v80H20V69z"/></g>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="-#{$ui-vintage-widget-viewbox-offset} -#{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M0,49c27,0,49-23,49-49h51v100H0V49z"/></g>\
+			</svg>') !important;*/
+		border-top-left-radius: $ui-vintage-widget-border-radius;
+		top: 0;
+		left: 0;
+	}
+
+	.ui-vintage-widget-tr {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} -#{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M51,0c0,27,23,49,49,49v51H0V0H51z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" d="M41,10c0,27,23,49,49,49v41H0V10H41z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" d="M31,20c0,27,23,49,49,49v31H0V20H31z"/></g>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} -#{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M51,0c0,27,23,49,49,49v51H0V0H51z"/></g>\
+			</svg>') !important;*/
+		border-top-right-radius: $ui-vintage-widget-border-radius;
+		top: 0;
+		right: 0;
+	}
+
+	.ui-vintage-widget-bl {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="-#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M49,100c0-27-22.5-49-49-49L0,0h100v100H49z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" d="M59,90c0-27-22.5-49-49-49V0h90v90H59z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" d="M69,80c0-27-22.5-49-49-49V0h80v80H69z"/></g>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="-#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M49,100c0-27-22.5-49-49-49L0,0h100v100H49z"/></g>\
+			</svg>') !important;*/
+		border-bottom-left-radius: $ui-vintage-widget-border-radius;
+		bottom: 0;
+		left: 0;
+	}
+
+	.ui-vintage-widget-br {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M100,51c-27,0-49,23-49,49H0V0h100V51z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" d="M90,41c-27,0-49,23-49,49H0V0h90V41z"/></g>\
+				<g><path fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" d="M80,31c-27,0-49,23-49,49H0V0h80V31z"/></g>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<g><path fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" d="M100,51c-27,0-49,23-49,49H0V0h100V51z"/></g>\
+			</svg>') !important;*/
+		border-bottom-right-radius: $ui-vintage-widget-border-radius;
+		bottom: 0;
+		right: 0;
+	}
+
+	.ui-vintage-widget-tm,
+	.ui-vintage-widget-bm {
+		background-color: $ui-vintage-widget-fill-color-2;
+		position: absolute;
+		height: $ui-vintage-widget-padding;
+		left: $ui-vintage-widget-padding;
+		right: $ui-vintage-widget-padding;
+	}
+
+	.ui-vintage-widget-tm {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} -#{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect y="0"  fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="106" height="100"/>\
+				<rect y="10" fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" width="106" height="90"/>\
+				<rect y="20" fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" width="106" height="80"/>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} -#{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect y="0"  fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="106" height="100"/>\
+			</svg>') !important;*/
+		top: 0;
+	}
+
+	.ui-vintage-widget-bm {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="106" height="100"/>\
+				<rect fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" width="106" height="90"/>\
+				<rect fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" width="106" height="80"/>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="106" height="100"/>\
+			</svg>') !important;*/
+		bottom: 0;
+	}
+
+	.ui-vintage-widget-cl,
+	.ui-vintage-widget-cr {
+		background-color: $ui-vintage-widget-fill-color-2;
+		position: absolute;
+		width: $ui-vintage-widget-padding;
+		top: $ui-vintage-widget-padding;
+		bottom: $ui-vintage-widget-padding;
+	}
+
+	.ui-vintage-widget-cl {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="-#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect x="0"  fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="100" height="106"/>\
+				<rect x="10" fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" width="90"  height="106"/>\
+				<rect x="20" fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" width="80"  height="106"/>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="-#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect x="0"  fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="100" height="106"/>\
+			</svg>') !important;*/
+		left: 0;
+	}
+
+	.ui-vintage-widget-cr {
+		background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="100" height="106"/>\
+				<rect fill="#{$ui-vintage-widget-fill-color-1}" stroke-width="#{$ui-vintage-widget-stroke-width-1}" stroke="#{$ui-vintage-widget-stroke-color-1}" width="90"  height="106"/>\
+				<rect fill="#{$ui-vintage-widget-fill-color-2}" stroke-width="#{$ui-vintage-widget-stroke-width-2}" stroke="#{$ui-vintage-widget-stroke-color-2}" width="80"  height="106"/>\
+			</svg>') !important;
+
+		/*background: transparent url('data:image/svg+xml;utf8,\
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="#{$ui-vintage-widget-padding}" height="#{$ui-vintage-widget-padding}" viewBox="#{$ui-vintage-widget-viewbox-offset} #{$ui-vintage-widget-viewbox-offset} 100 100" enable-background="new 0 0 100 100" xml:space="preserve">\
+				<rect fill="#{$ui-vintage-widget-fill-color-0}" stroke-width="#{$ui-vintage-widget-stroke-width-0}" stroke="#{$ui-vintage-widget-stroke-color-0}" width="100" height="106"/>\
+			</svg>') !important;*/
+		right: 0;
+	}
 }

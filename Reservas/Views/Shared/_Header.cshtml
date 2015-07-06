@@ -1,14 +1,26 @@
 ﻿<header class="site-header" role="banner">
-	<div class="site-header-container container">
-		<nav class="site-navbar" role="navigation">
-			<ul class="list-unstyled">
-				<li data-ng-class="menuClass('flights')">
-					<a href="#/flights" data-translate="FLIGHTS"></a>
-				</li>
-				<li data-ng-class="menuClass('hotels')">
-					<a href="#/hotels" data-translate="HOTELS"></a>
-				</li>
-			</ul>
-		</nav>
+	<div class="container">
+		<div class="search-form__wrapper">
+
+			<!--  UI Tabs directive -->
+			<div data-ui-tabs class="ui-tabs">
+				<!--  UI Tab directive -->
+				<div data-ui-tab id="tab1" data-title="{{ 'FLIGHTS' | translate }}">
+
+					<div data-ng-include="'Application/Pages/Flights/Views/SearchFormTmpl.html'" data-include-replace></div>
+
+				</div>
+				<!-- /UI Tab directive -->
+				<!--  UI Tab directive -->
+				<div data-ui-tab id="tab2" data-title="{{ 'HOTELS' | translate }}">
+
+					<div data-ng-include="'Application/Pages/Hotels/Views/SearchFormTmpl.html'" data-include-replace></div>
+
+				</div>
+				<!-- /UI Tab directive -->
+			</div>
+			<!-- /UI Tabs directive -->
+
+		</div>
 	</div>
 </header>

@@ -1,0 +1,14 @@
+﻿@mixin retro-text() {
+
+}
+
+@mixin text-ellip() {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	//-moz-binding: url( 'bindings.xml#ellipsis' );
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	max-width: 100%;
+}

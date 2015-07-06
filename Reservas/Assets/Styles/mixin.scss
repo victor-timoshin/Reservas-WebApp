@@ -12,21 +12,6 @@
 }
 
 /* ==========================================================
-## TEXT ELLIP
-============================================================= */
-
-@mixin text-ellip() {
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	//-moz-binding: url( 'bindings.xml#ellipsis' );
-	position: relative;
-	white-space: nowrap;
-	overflow: hidden;
-	display: inline-block;
-	max-width: 100%;
-}
-
-/* ==========================================================
 ## BOX RGBA v1
 ============================================================= */
 
@@ -50,6 +35,17 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$ieColor}',endColorstr='#{$ieColor}',GradientType=0);
 	zoom: 1;
 }
+
+/* ==========================================================
+## CALC
+============================================================= */
+
+@mixin calc($property, $expression) { 
+	#{$property}: -webkit-calc(#{$expression}); /* Safari 6, Chrome 19+ */
+	#{$property}:    -moz-calc(#{$expression}); /* Firefox 4+ */
+	#{$property}:      -o-calc(#{$expression});
+	#{$property}:         calc(#{$expression}); /* Firefox 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers */
+} 
 
 /* ==========================================================
 ## BACKFACE VISIBILITY
@@ -114,8 +110,8 @@
 ## SHADOW
 ============================================================= */
 
-@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, .4), $inset: "") {
-	@if ($inset != "") {
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, .4), $inset: '') {
+	@if ($inset != '') {
 		@include css3-prefix('box-shadow', $inset $x $y $blur $color);
 	} @else {
 		@include css3-prefix('box-shadow', $x $y $blur $color);
@@ -135,10 +131,10 @@
 ============================================================= */
 
 @mixin transition-duration($duration) {
-    -moz-transition-duration: $duration;
-      -o-transition-duration: $duration;
-         transition-duration: $duration;
-            -webkit-duration: $duration;
+	-moz-transition-duration: $duration;
+	  -o-transition-duration: $duration;
+	     transition-duration: $duration;
+	        -webkit-duration: $duration;
 }
 
 /* ==========================================================

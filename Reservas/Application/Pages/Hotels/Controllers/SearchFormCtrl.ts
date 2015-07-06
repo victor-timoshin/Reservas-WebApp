@@ -29,8 +29,8 @@ module App.Hotels.Controllers {
 
 			angular.copy({
 				iata: 'MOW',
-				check_in: '2015-06-28',
-				check_out: '2015-07-18',
+				check_in: '2015-08-28',
+				check_out: '2015-09-18',
 				adults_count: 1,
 				children_count: 0
 			}, self.$scope.searchData);

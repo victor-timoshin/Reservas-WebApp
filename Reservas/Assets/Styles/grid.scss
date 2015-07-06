@@ -1,30 +1,4 @@
-﻿$grid-columns: 16;
-$grid-gutter-width: 10px;
-
-/* Extra small screen / phone */
-$screen-xs: 480px;
-$screen-xs-min: $screen-xs;
-
-/* Small screen / tablet */
-$screen-sm: 768px;
-$screen-sm-min: $screen-sm;
-
-$container-tablet: (720px + $grid-gutter-width);
-$container-sm: $container-tablet;
-
-/* Medium screen / desktop */
-$screen-md: 992px;
-$screen-md-min: $screen-md;
-
-$container-desktop: (940px + $grid-gutter-width);
-$container-md: $container-desktop;
-
-/* Large screen / wide desktop */
-$screen-lg: 1200px;
-$screen-lg-min: $screen-lg;
-
-$container-large-desktop: (1140px + $grid-gutter-width);
-$container-lg: $container-large-desktop;
+﻿@import "variables.scss";
 
 %clearfix {
 	&:before,
